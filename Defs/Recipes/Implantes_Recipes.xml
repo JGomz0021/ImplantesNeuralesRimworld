@@ -1,0 +1,26 @@
+<RecipeDef>
+  <defName>Install_ImplanteSubNeural</defName>
+  <label>instalar implante de subprocesamiento</label>
+  <description>Instala un implante de subprocesamiento neural basico en el cerebro del objetivo.</description>
+
+  <workerClass>Recipe_InstallImplant</workerClass>
+  <jobString>Instalando implante de subprocesamiento.</jobString>
+  <workAmount>1200</workAmount>
+
+  <appliedOnFixedBodyParts>
+    <li>Brain</li>
+  </appliedOnFixedBodyParts>
+
+  <addsHediff>ImplanteSubprocesamientoNeural</addsHediff>
+
+  <ingredients>
+    <li>
+      <filter>
+        <thingDefs>
+          <li>ImplanteSubprocesamientoNeuralBasico_Item</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </li>
+  </ingredients>
+</RecipeDef>

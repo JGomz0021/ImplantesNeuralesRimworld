@@ -1,0 +1,14 @@
+<ResearchProjectDef>
+  <defName>SubprocesamientoNeural</defName>
+  <label>subprocesamiento neural</label>
+  <description>
+    Desarrollo de implantes neuronales especializados para mecanizadores.
+  </description>
+
+  <baseCost>2000</baseCost>
+  <techLevel>Industrial</techLevel>
+
+  <prerequisites>
+    <li>Machining</li>
+  </prerequisites>
+</ResearchProjectDef>

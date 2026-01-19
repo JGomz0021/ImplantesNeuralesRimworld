@@ -1,0 +1,26 @@
+<HediffDef>
+  <defName>ImplanteSubprocesamientoNeural</defName>
+  <label>implante de subprocesamiento neural</label>
+  <description>
+    Implante neural experimental que mejora ligeramente la capacidad de
+    procesamiento del portador. En mecanizadores, optimiza la sincronización
+    con mecas, aumentando su eficiencia de trabajo.
+  </description>
+
+  <hediffClass>Hediff_Implant</hediffClass>
+
+  <addedPartProps>
+    <solid>true</solid>
+  </addedPartProps>
+
+  <stages>
+    <li>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>0.10</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>

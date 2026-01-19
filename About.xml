@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModMetaData>
+  <name>Implantes de Subprocesamiento Neural</name>
+  <author>JGomz21</author>
+  <packageId>JGomz21.implantessubneural</packageId>
+
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+
+  <description>
+    Añade implantes de subprocesamiento neural progresivos, diseñados para
+    mecanizadores y no mecanizadores, mejorando la conciencia, la eficiencia
+    de mecas y otros parámetros.
+  </description>
+
+  <modDependencies>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+</ModMetaData>

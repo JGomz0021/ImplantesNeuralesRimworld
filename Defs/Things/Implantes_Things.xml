@@ -1,0 +1,35 @@
+<ThingDef ParentName="ImplantBase">
+  <defName>ImplanteSubprocesamientoNeuralBasico_Item</defName>
+  <label>implante de subprocesamiento neural básico</label>
+  <description>
+    Implante neural que optimiza el subprocesamiento cerebral.
+    En mecanizadores, mejora la eficiencia de control sobre sus mecas.
+  </description>
+
+  <graphicData>
+    <texPath>Things/Item/Implant/NeuralImplant</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <costList>
+    <SubcoreBasic>1</SubcoreBasic>
+    <ComponentIndustrial>5</ComponentIndustrial>
+    <Steel>50</Steel>
+  </costList>
+
+  <recipeMaker>
+    <workAmount>6000</workAmount>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+  </recipeMaker>
+
+  <comps>
+    <li Class="CompProperties_UseEffectInstallImplant">
+      <hediffDef>ImplanteSubprocesamientoNeural</hediffDef>
+    </li>
+  </comps>
+</ThingDef>
