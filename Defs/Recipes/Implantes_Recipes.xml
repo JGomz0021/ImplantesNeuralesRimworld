@@ -1,26 +1,55 @@
-<RecipeDef>
-  <defName>Install_ImplanteSubNeural</defName>
-  <label>instalar implante de subprocesamiento</label>
-  <description>Instala un implante de subprocesamiento neural basico en el cerebro del objetivo.</description>
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
 
-  <workerClass>Recipe_InstallImplant</workerClass>
-  <jobString>Instalando implante de subprocesamiento.</jobString>
-  <workAmount>1200</workAmount>
+  <RecipeDef>
+    <defName>Install_ChipSubNeural</defName>
+    <label>instalar chip de subprocesamiento neural</label>
+    <description>Instala un chip de subprocesamiento neural básico en el cerebro del objetivo.</description>
 
-  <appliedOnFixedBodyParts>
-    <li>Brain</li>
-  </appliedOnFixedBodyParts>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Instalando chip de subprocesamiento.</jobString>
+    <workAmount>2500</workAmount>
+    
+    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+    
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
 
-  <addsHediff>ImplanteSubprocesamientoNeural</addsHediff>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
 
-  <ingredients>
-    <li>
-      <filter>
-        <thingDefs>
-          <li>ImplanteSubprocesamientoNeuralBasico_Item</li>
-        </thingDefs>
-      </filter>
-      <count>1</count>
-    </li>
-  </ingredients>
-</RecipeDef>
+    <addsHediff>ChipSubprocesamientoNeural</addsHediff>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChipSubprocesamientoNeuralBasico_Item</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChipSubprocesamientoNeuralBasico_Item</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

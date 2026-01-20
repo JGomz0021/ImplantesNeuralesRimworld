@@ -1,26 +1,60 @@
-<HediffDef>
-  <defName>ImplanteSubprocesamientoNeural</defName>
-  <label>implante de subprocesamiento neural</label>
-  <description>
-    Implante neural experimental que mejora ligeramente la capacidad de
-    procesamiento del portador. En mecanizadores, optimiza la sincronización
-    con mecas, aumentando su eficiencia de trabajo.
-  </description>
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
 
-  <hediffClass>Hediff_Implant</hediffClass>
+  <HediffDef>
+    <defName>ChipSubprocesamientoNeural</defName>
+    <label>chip de subprocesamiento neural</label>
+    <labelNoun>un implante de subprocesamiento neural</labelNoun>
+    <description>Implante neural experimental que mejora ligeramente la capacidad de procesamiento del portador. En mecanizadores, optimiza la sincronización con mecas.</description>
 
-  <addedPartProps>
-    <solid>true</solid>
-  </addedPartProps>
+    <descriptionHyperlinks>
+      <ThingDef>ChipSubprocesamientoNeuralBasico_Item</ThingDef>
+    </descriptionHyperlinks>
 
-  <stages>
-    <li>
-      <capMods>
-        <li>
-          <capacity>Consciousness</capacity>
-          <offset>0.10</offset>
-        </li>
-      </capMods>
-    </li>
-  </stages>
-</HediffDef>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+
+    <!-- Aquí añadimos el modificador de hambre -->
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+      </li>
+    </comps>
+
+    <stages>
+      <li>
+        <label>básico</label>
+
+        <!-- Capacidades -->
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+
+        <!-- Stats válidos -->
+        <statOffsets>
+          <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+
+        <statFactors>
+          <RestFallRateFactor>1.10</RestFallRateFactor>
+        </statFactors>
+
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

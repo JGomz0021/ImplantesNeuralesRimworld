@@ -1,35 +1,55 @@
-<ThingDef ParentName="ImplantBase">
-  <defName>ImplanteSubprocesamientoNeuralBasico_Item</defName>
-  <label>implante de subprocesamiento neural básico</label>
-  <description>
-    Implante neural que optimiza el subprocesamiento cerebral.
-    En mecanizadores, mejora la eficiencia de control sobre sus mecas.
-  </description>
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
 
-  <graphicData>
-    <texPath>Things/Item/Implant/NeuralImplant</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ChipSubprocesamientoNeuralBasico_Item</defName>
+    <label>chip de subprocesamiento neural básico</label>
+    <description>Chip neural que optimiza el subprocesamiento cerebral. En mecanizadores, mejora la eficiencia de control sobre sus mecas.</description>
 
-  <costList>
-    <SubcoreBasic>1</SubcoreBasic>
-    <ComponentIndustrial>5</ComponentIndustrial>
-    <Steel>50</Steel>
-  </costList>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
 
-  <recipeMaker>
-    <workAmount>6000</workAmount>
-    <skillRequirements>
-      <Crafting>8</Crafting>
-    </skillRequirements>
-    <recipeUsers>
-      <li>FabricationBench</li>
-    </recipeUsers>
-  </recipeMaker>
+    <techLevel>Industrial</techLevel>
 
-  <comps>
-    <li Class="CompProperties_UseEffectInstallImplant">
-      <hediffDef>ImplanteSubprocesamientoNeural</hediffDef>
-    </li>
-  </comps>
-</ThingDef>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>6000</WorkToMake>
+    </statBases>
+
+    <thingCategories>
+      <li>BodyParts</li>
+    </thingCategories>
+
+    <costList>
+      <SubcoreBasic>1</SubcoreBasic>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Steel>50</Steel>
+    </costList>
+
+    <recipeMaker>
+      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>SubprocesamientoNeural</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>ChipSubprocesamientoNeural</hediffDef>
+        <bodyPart>Brain</bodyPart>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

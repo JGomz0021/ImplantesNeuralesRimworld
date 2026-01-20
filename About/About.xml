@@ -16,8 +16,13 @@
 
   <modDependencies>
     <li>
+      <packageId>Ludeon.RimWorld</packageId>
+      <displayName>RimWorld</displayName>
+    </li>
+    <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
       <displayName>Biotech</displayName>
     </li>
-  </modDependencies>
+    </modDependencies>
+
 </ModMetaData>
