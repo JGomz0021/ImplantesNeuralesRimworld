@@ -2,8 +2,8 @@
 <Defs>
 
   <ThingDef ParentName="BodyPartBionicBase">
-    <defName>ChipSubprocesamientoNeuralBasico_Item</defName>
-    <label>chip de subprocesamiento neural básico</label>
+    <defName>ChipSubprocesamientoNeural_Item</defName>
+    <label>chip de subprocesamiento neural</label>
     <description>Chip neural que optimiza el subprocesamiento cerebral. En mecanizadores, mejora la eficiencia de control sobre sus mecas.</description>
 
     <graphicData>
@@ -11,10 +11,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 
-    <techLevel>Industrial</techLevel>
+    <techLevel>Spacer</techLevel>
 
     <statBases>
-      <MarketValue>800</MarketValue>
+      <MarketValue>8000</MarketValue>
       <Mass>0.3</Mass>
       <WorkToMake>6000</WorkToMake>
     </statBases>
@@ -24,9 +24,12 @@
     </thingCategories>
 
     <costList>
-      <SubcoreBasic>1</SubcoreBasic>
-      <ComponentIndustrial>5</ComponentIndustrial>
-      <Steel>50</Steel>
+      <SubcoreHigh>1</SubcoreHigh>
+      <ComponentSpacer>10</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Gold>100</Gold>
+      <Silver>100</Silver>
+      <NanostructuringChip>1</NanostructuringChip>
     </costList>
 
     <recipeMaker>
@@ -53,3 +56,4 @@
   </ThingDef>
 
 </Defs>
+

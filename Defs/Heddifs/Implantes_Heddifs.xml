@@ -5,10 +5,10 @@
     <defName>ChipSubprocesamientoNeural</defName>
     <label>chip de subprocesamiento neural</label>
     <labelNoun>un implante de subprocesamiento neural</labelNoun>
-    <description>Implante neural experimental que mejora ligeramente la capacidad de procesamiento del portador. En mecanizadores, optimiza la sincronización con mecas.</description>
+    <description>Implante neural experimental que mejora la capacidad de procesamiento del portador. El aumento de actividad cerebral incrementa el consumo metabólico. En mecanizadores, optimiza la sincronización con mecas.</description>
 
     <descriptionHyperlinks>
-      <ThingDef>ChipSubprocesamientoNeuralBasico_Item</ThingDef>
+      <ThingDef>ChipSubprocesamientoNeural_Item</ThingDef>
     </descriptionHyperlinks>
 
     <hediffClass>Hediff_Implant</hediffClass>
@@ -21,13 +21,6 @@
       <partEfficiency>1.0</partEfficiency>
     </addedPartProps>
 
-    <!-- Aquí añadimos el modificador de hambre -->
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.05</severityPerDay>
-      </li>
-    </comps>
-
     <stages>
       <li>
         <label>básico</label>
@@ -36,21 +29,24 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>0.05</offset>
+            <offset>0.10</offset> <!-- +10% conciencia -->
           </li>
           <li>
             <capacity>Sight</capacity>
-            <offset>0.05</offset>
+            <offset>0.10</offset> <!-- +10% vista -->
           </li>
         </capMods>
 
-        <!-- Stats válidos -->
+        <!-- Modificadore de hambre -->
+        <hungerRateFactorOffset>0.15</hungerRateFactorOffset> <!-- +15% tasa de caída de hambre -->
+
+        <!-- Stats -->
         <statOffsets>
-          <MechBandwidth>2</MechBandwidth>
+          <MechBandwidth>12</MechBandwidth>
         </statOffsets>
 
         <statFactors>
-          <RestFallRateFactor>1.10</RestFallRateFactor>
+          <RestRateMultiplier>1.05</RestRateMultiplier> <!-- +5% tasa de descanso -->
         </statFactors>
 
       </li>

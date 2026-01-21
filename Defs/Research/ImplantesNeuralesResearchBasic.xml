@@ -6,12 +6,12 @@
     <label>subprocesamiento neural</label>
     <description>Desarrollo de implantes neuronales especializados que mejoran la conciencia. En mecanizadores, optimiza el control y eficiencia de sus mecas.</description>
 
-    <baseCost>2000</baseCost>
-    <techLevel>Industrial</techLevel>
+    <baseCost>5000</baseCost>
+    <techLevel>Spacer</techLevel>
 
     <prerequisites>
-      <li>BasicMechtech</li>
-      <li>Machining</li>
+      <li>UltraMechtech</li>
+      <li>AdvancedFabrication</li>
     </prerequisites>
 
     <researchViewX>4.00</researchViewX>

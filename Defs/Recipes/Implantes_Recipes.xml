@@ -4,10 +4,10 @@
   <RecipeDef>
     <defName>Install_ChipSubNeural</defName>
     <label>instalar chip de subprocesamiento neural</label>
-    <description>Instala un chip de subprocesamiento neural básico en el cerebro del objetivo.</description>
+    <description>Instala un chip de subprocesamiento neural en el cerebro del objetivo.</description>
 
     <workerClass>Recipe_InstallImplant</workerClass>
-    <jobString>Instalando chip de subprocesamiento.</jobString>
+    <jobString>Instalando chip de subprocesamiento Neural.</jobString>
     <workAmount>2500</workAmount>
     
     <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
@@ -27,7 +27,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>ChipSubprocesamientoNeuralBasico_Item</li>
+            <li>ChipSubprocesamientoNeural_Item</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -44,7 +44,7 @@
 
     <fixedIngredientFilter>
       <thingDefs>
-        <li>ChipSubprocesamientoNeuralBasico_Item</li>
+        <li>ChipSubprocesamientoNeural_Item</li>
       </thingDefs>
       <categories>
         <li>Medicine</li>
