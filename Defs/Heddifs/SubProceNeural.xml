@@ -5,7 +5,9 @@
     <defName>ChipSubprocesamientoNeural</defName>
     <label>chip de subprocesamiento neural</label>
     <labelNoun>un implante de subprocesamiento neural</labelNoun>
-    <description>Implante neural experimental que mejora la capacidad de procesamiento del portador. El aumento de actividad cerebral incrementa el consumo metabólico. En mecanizadores, optimiza la sincronización con mecas.</description>
+    <description>Implante neural que mejora la capacidad de procesamiento del portador. 
+      El aumento de actividad cerebral incrementa el consumo metabólico. 
+      En mecanizadores, optimiza la sincronización con mecas.</description>
 
     <descriptionHyperlinks>
       <ThingDef>ChipSubprocesamientoNeural_Item</ThingDef>
@@ -23,7 +25,7 @@
 
     <stages>
       <li>
-        <label>básico</label>
+        <label>Subprocesamiento Neural</label>
 
         <!-- Capacidades -->
         <capMods>

@@ -14,8 +14,8 @@
       <li>AdvancedFabrication</li>
     </prerequisites>
 
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>4.0</researchViewY>
 
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>ChipAsistentePunteria</defName>
+    <label>chip de asistencia de punteria</label>
+    <labelNoun>un implante que mejora la punteria</labelNoun>
+    <description>Implante que se instala en la retina de un ojo que mejora la punteria del individuo.</description>
+
+    <descriptionHyperlinks>
+      <ThingDef>ChipAsistentePunteria_Item</ThingDef>
+    </descriptionHyperlinks>
+
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+
+    <stages>
+      <li>
+        <label>Asistente Apuntado</label>
+
+ 
+        <statFactors>
+          
+          <ShootingAccuracyFactor>1.10</ShootingAccuracyFactor>
+          
+        </statFactors>
+
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
