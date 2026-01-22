@@ -26,6 +26,9 @@
 
       </li>
     </stages>
+
+    <spawnThingOnRemoved>ChipAsistentePunteria_Item</spawnThingOnRemoved>
+
   </HediffDef>
 
 </Defs>

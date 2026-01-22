@@ -51,10 +51,41 @@
       </categories>
     </fixedIngredientFilter>
 
-    <!-- ESTO ES LO QUE FALTABA -->
     <recipeUsers>
       <li>Human</li>
     </recipeUsers>
+  </RecipeDef>
+
+  <!-- Recipe de remoción del chip de subprocesamiento neural -->
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Remove_ChipSubNeural</defName>
+    <label>remover chip de subprocesamiento neural</label>
+    <description>Remueve el chip de subprocesamiento neural del cerebro.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <jobString>Removiendo chip de subprocesamiento neural.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>ChipSubprocesamientoNeural</removesHediff>
   </RecipeDef>
 
 </Defs>

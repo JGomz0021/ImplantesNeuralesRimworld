@@ -53,6 +53,8 @@
 
       </li>
     </stages>
+
+    <spawnThingOnRemoved>ChipSubprocesamientoNeural_Item</spawnThingOnRemoved>
   </HediffDef>
 
 </Defs>

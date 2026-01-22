@@ -56,4 +56,35 @@
     </recipeUsers>
   </RecipeDef>
 
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveAsistPunteria</defName>
+        <label>remover cip de asistencia de punteria</label>
+        <description>Remueve el chip de asistenciade punteria.</description>
+        <workerClass>Recipe_RemoveImplant</workerClass>
+        <jobString>Removiendo chip de asistencia de punteria.</jobString>
+        <workAmount>3000</workAmount>
+        <skillRequirements>
+            <Medicine>6</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <removesHediff>ChipAsistentePunteria</removesHediff>
+    </RecipeDef>
+
 </Defs>

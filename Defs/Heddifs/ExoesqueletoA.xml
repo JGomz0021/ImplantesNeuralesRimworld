@@ -43,6 +43,7 @@
                 </capMods>
             </li>
         </stages>
+        <spawnThingOnRemoved>ExoesqueletoA_Item</spawnThingOnRemoved>
     </HediffDef>
 
 </Defs>
