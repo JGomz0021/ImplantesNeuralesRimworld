@@ -2,15 +2,15 @@
 <Defs>
 
     <!-- Recipe para instalar el Exoesqueleto de Ataque -->
-    <RecipeDef>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
         <defName>Install_Exoesqueleto_Ataque</defName>
         <label>instalar exoesqueleto de ataque</label>
         <description>Instala un exoesqueleto de ataque de cuerpo completo. Este procedimiento es extremadamente complejo y requiere habilidades quirúrgicas avanzadas.</description>
         <workerClass>Recipe_InstallImplant</workerClass>
         <jobString>Instalando exoesqueleto de ataque.</jobString>
-        <workAmount>5000</workAmount> <!-- Doble que una extremidad biónica (2500) -->
+        <workAmount>5000</workAmount>
         <skillRequirements>
-            <Medicine>8</Medicine> <!-- Requiere alta habilidad médica -->
+            <Medicine>8</Medicine>
         </skillRequirements>
         <ingredients>
             <li>
@@ -27,7 +27,7 @@
                         <li>Medicine</li>
                     </categories>
                 </filter>
-                <count>3</count> <!-- Requiere más medicina que una cirugía normal -->
+                <count>3</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -39,19 +39,19 @@
             </categories>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
-            <li>Torso</li> <!-- Se instala en el torso (cuerpo completo) -->
+            <li>Torso</li>
         </appliedOnFixedBodyParts>
         <addsHediff>Exoesqueleto_Ataque</addsHediff>
     </RecipeDef>
 
     <!-- Recipe para remover el Exoesqueleto de Ataque -->
-    <RecipeDef>
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Exoesqueleto_Ataque</defName>
         <label>remover exoesqueleto de ataque</label>
         <description>Remueve el exoesqueleto de ataque de cuerpo completo.</description>
         <workerClass>Recipe_RemoveImplant</workerClass>
         <jobString>Removiendo exoesqueleto de ataque.</jobString>
-        <workAmount>3000</workAmount> <!-- Remover también toma tiempo -->
+        <workAmount>3000</workAmount>
         <skillRequirements>
             <Medicine>6</Medicine>
         </skillRequirements>

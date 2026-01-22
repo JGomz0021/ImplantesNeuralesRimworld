@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     
-    <ThingDef>
+    <ThingDef ParentName="BodyPartBionicBase">
         <defName>ExoesqueletoA_Item</defName>
-        <label>Exoesqueleto de Ataque</label>
-        <description>Un exoesqueleto diseñado para mejorar el rendimiento en combate</description>
+        <label>exoesqueleto de ataque</label>
+        <description>Un exoesqueleto avanzado de cuerpo completo diseñado para mejorar significativamente el rendimiento en combate. Aumenta la velocidad, precisión, esquiva y daño en combate cuerpo a cuerpo.</description>
+
+        <descriptionHyperlinks>
+            <RecipeDef>Install_Exoesqueleto_Ataque</RecipeDef>
+        </descriptionHyperlinks>
 
         <graphicData>
             <texPath>Things/Item/Health/HealthItem</texPath>
@@ -15,44 +19,36 @@
 
         <statBases>
             <MarketValue>8000</MarketValue>
-            <Mass>0.3</Mass>
-            <WorkToMake>6000</WorkToMake>
+            <Mass>2.5</Mass>
+            <WorkToMake>8000</WorkToMake>
         </statBases>
 
         <thingCategories>
-            <li>BodyParts</li>
+            <li>BodyPartsUltra</li>
         </thingCategories>
 
         <costList>
             <ComponentSpacer>15</ComponentSpacer>
             <Plasteel>200</Plasteel>
-            <Gold>100</Gold>
+            <Gold>50</Gold>
             <Silver>100</Silver>
         </costList>
 
         <recipeMaker>
-            <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
             <soundWorking>Recipe_Smith</soundWorking>
             <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
             <skillRequirements>
-                <Crafting>8</Crafting>
+                <Crafting>10</Crafting>
             </skillRequirements>
-            <researchPrerequisite>Implantes+</researchPrerequisite>
+            <researchPrerequisite>ImplantesExtra</researchPrerequisite>
             <recipeUsers>
                 <li>FabricationBench</li>
             </recipeUsers>
         </recipeMaker>
 
-        <comps>
-            <li Class="CompProperties_UseEffectInstallImplant">
-            <hediffDef>ChipSubprocesamientoNeural</hediffDef>
-            <bodyPart>Brain</bodyPart>
-            <canUpgrade>false</canUpgrade>
-          </li>
-        </comps>
-
-
     </ThingDef>
+
 </Defs>

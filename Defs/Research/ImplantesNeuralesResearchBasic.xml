@@ -2,7 +2,7 @@
 <Defs>
 
   <ResearchProjectDef>
-    <defName>Implantes+</defName>
+    <defName>ImplantesExtra</defName>
     <label>implantes neurales</label>
     <description>Desarrollo de implantes especializados que mejoran diferentes aspectos del cuerpo.</description>
 
@@ -12,10 +12,11 @@
     <prerequisites>
       <li>UltraMechtech</li>
       <li>AdvancedFabrication</li>
+      <li>Bionics</li>
     </prerequisites>
 
     <researchViewX>19.0</researchViewX>
-    <researchViewY>5.0</researchViewY>
+    <researchViewY>4.5</researchViewY>
 
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>

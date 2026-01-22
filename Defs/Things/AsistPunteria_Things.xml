@@ -50,7 +50,7 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>Implantes+</researchPrerequisite>
+      <researchPrerequisite>ImplantesExtra</researchPrerequisite>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>

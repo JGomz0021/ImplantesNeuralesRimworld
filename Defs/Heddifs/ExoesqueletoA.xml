@@ -3,7 +3,8 @@
 
     <HediffDef>
         <defName>Exoesqueleto_Ataque</defName>
-        <label>Exoesqueleto Ataque</label>
+        <label>exoesqueleto de ataque</label>
+        <labelNoun>un exoesqueleto de ataque</labelNoun>
         <description>Un exoesqueleto diseñado para un mejor rendimiento en combate. Mejora significativamente las capacidades físicas y de combate del portador.</description>
 
         <descriptionHyperlinks>
@@ -17,22 +18,27 @@
 
         <stages>
             <li>
-                <!-- Bonos de estadísticas -->
+                <!-- Bonos de estadísticas con statOffsets -->
                 <statOffsets>
                     <ShootingAccuracyPawn>1.0</ShootingAccuracyPawn> <!-- +1.0 precisión de disparo -->
                     <MeleeDodgeChance>1.0</MeleeDodgeChance> <!-- +1.0 probabilidad de esquivar -->
-                    <MeleeDamageFactor>3.0</MeleeDamageFactor> <!-- +3.0 daño cuerpo a cuerpo -->
                 </statOffsets>
 
-                <!-- Bonos de capacidades (en porcentaje) -->
+                <!-- Bonos multiplicadores con statFactors -->
+                <statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor> <!-- 150% de daño (50% más) -->
+                    <MoveSpeed>1.10</MoveSpeed> <!-- +10% velocidad de movimiento -->
+                </statFactors>
+
+                <!-- Bonos de capacidades -->
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
-                        <offset>0.10</offset> <!-- +10% movimiento -->
+                        <postFactor>1.10</postFactor> <!-- +10% movimiento -->
                     </li>
                     <li>
                         <capacity>Manipulation</capacity>
-                        <offset>0.05</offset> <!-- +5% manipulación -->
+                        <postFactor>1.05</postFactor> <!-- +5% manipulación -->
                     </li>
                 </capMods>
             </li>
