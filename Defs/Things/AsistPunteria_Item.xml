@@ -2,38 +2,47 @@
 <Defs>
 
   <ThingDef ParentName="BodyPartBionicBase">
-    <defName>ChipSubprocesamientoNeural_Item</defName>
-    <label>chip de subprocesamiento neural</label>
-    <description>Chip neural que optimiza el subprocesamiento cerebral. En mecanizadores, mejora la eficiencia de control sobre sus mecas.</description>
+    <!-- Identificador único interno del item -->
+    <defName>ChipAsistentePunteria_Item</defName>
+    
+    <!-- Nombre visible en el juego -->
+    <label>chip asistente de puntería</label>
+    
+    <!-- Descripción que aparece en el juego -->
+    <description>Chip que se implanta en un ojo, realiza cálculos de balística y se los proporciona al usuario para una mejor precisión.</description>
 
+    <!-- Configuración gráfica -->
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 
+    <!-- Nivel tecnológico: Medieval, Industrial, Spacer, Ultra, Archotech -->
     <techLevel>Spacer</techLevel>
 
+    <!-- Estadísticas base del item -->
     <statBases>
-      <MarketValue>8000</MarketValue>
+      <MarketValue>5000</MarketValue>
       <Mass>0.3</Mass>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToMake>4000</WorkToMake>
     </statBases>
 
+    <!-- Categorías para almacenamiento -->
     <thingCategories>
       <li>BodyParts</li>
     </thingCategories>
 
+    <!-- Materiales necesarios para fabricar -->
     <costList>
-      <SubcoreHigh>1</SubcoreHigh>
       <ComponentSpacer>10</ComponentSpacer>
       <Plasteel>100</Plasteel>
       <Gold>100</Gold>
       <Silver>100</Silver>
-      <NanostructuringChip>1</NanostructuringChip>
     </costList>
 
+    <!-- Configuración de la receta de fabricación -->
     <recipeMaker>
-      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -47,14 +56,14 @@
       </recipeUsers>
     </recipeMaker>
 
+    <!-- Componentes del item -->
     <comps>
       <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>ChipSubprocesamientoNeural</hediffDef>
-        <bodyPart>Brain</bodyPart>
-        <canUpgrade>false</canUpgrade>
+        <hediffDef>ChipAsistentePunteria</hediffDef>
+        <bodyPart>Eye</bodyPart>
+        <canUpgrade>false</canUpgrade> <!-- No reemplaza otros implantes oculares -->
       </li>
     </comps>
   </ThingDef>
 
 </Defs>
-

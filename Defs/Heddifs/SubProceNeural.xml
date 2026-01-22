@@ -3,11 +3,9 @@
 
   <HediffDef>
     <defName>ChipSubprocesamientoNeural</defName>
-    <label>chip de subprocesamiento neural</label>
+    <label>Subprocesamiento Neural</label>
     <labelNoun>un implante de subprocesamiento neural</labelNoun>
-    <description>Implante neural que mejora la capacidad de procesamiento del portador. 
-      El aumento de actividad cerebral incrementa el consumo metabólico. 
-      En mecanizadores, optimiza la sincronización con mecas.</description>
+    <description>Implante neural que mejora la capacidad de procesamiento del portador. El aumento de actividad cerebral incrementa el consumo metabólico. En mecanizadores, optimiza la sincronización con mecas.</description>
 
     <descriptionHyperlinks>
       <ThingDef>ChipSubprocesamientoNeural_Item</ThingDef>
@@ -25,7 +23,6 @@
 
     <stages>
       <li>
-        <label>Subprocesamiento Neural</label>
 
         <!-- Capacidades -->
         <capMods>
@@ -39,16 +36,19 @@
           </li>
         </capMods>
 
-        <!-- Modificadore de hambre -->
+        <!-- Modificador de hambre -->
         <hungerRateFactorOffset>0.15</hungerRateFactorOffset> <!-- +15% tasa de caída de hambre -->
 
         <!-- Stats -->
         <statOffsets>
           <MechBandwidth>12</MechBandwidth>
+          <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups> <!-- +1 grupo de control de mecas -->
         </statOffsets>
 
         <statFactors>
           <RestRateMultiplier>1.05</RestRateMultiplier> <!-- +5% tasa de descanso -->
+          <MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">1.15</MechRepairSpeed> <!-- +15% velocidad de reparación de mecas -->
+          <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">1.10</WorkSpeedGlobalOffsetMech> <!-- +10% velocidad de trabajo de mecas -->
         </statFactors>
 
       </li>

@@ -2,9 +2,9 @@
 <Defs>
 
   <ResearchProjectDef>
-    <defName>SubprocesamientoNeural</defName>
-    <label>subprocesamiento neural</label>
-    <description>Desarrollo de implantes neuronales especializados que mejoran la conciencia. En mecanizadores, optimiza el control y eficiencia de sus mecas.</description>
+    <defName>ImplantesNeurales</defName>
+    <label>implantes neurales</label>
+    <description>Desarrollo de implantes especializados que mejoran diferentes aspectos del cuerpo.</description>
 
     <baseCost>5000</baseCost>
     <techLevel>Spacer</techLevel>
@@ -14,8 +14,8 @@
       <li>AdvancedFabrication</li>
     </prerequisites>
 
-    <researchViewX>10.0</researchViewX>
-    <researchViewY>4.0</researchViewY>
+    <researchViewX>19.0</researchViewX>
+    <researchViewY>5.0</researchViewY>
 
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>

@@ -2,32 +2,32 @@
 <Defs>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>Install_ChipSubNeural</defName>
-    <label>instalar chip de subprocesamiento neural</label>
-    <description>Instala un chip de subprocesamiento neural en el cerebro del objetivo.</description>
+    <defName>Install_ChipAsistentePunteria</defName>
+    <label>instalar chip de asistencia de puntería</label>
+    <description>Instala un chip de asistencia de puntería que se conecta al nervio óptico y procesa información visual para mejorar la precisión.</description>
 
     <workerClass>Recipe_InstallImplant</workerClass>
-    <jobString>Instalando chip de subprocesamiento neural.</jobString>
-    <workAmount>2500</workAmount>
+    <jobString>Instalando chip de asistencia de puntería.</jobString>
+    <workAmount>2000</workAmount>
     
-    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
-    <deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+    <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
     
     <skillRequirements>
-      <Medicine>8</Medicine>
+      <Medicine>6</Medicine>
     </skillRequirements>
 
     <appliedOnFixedBodyParts>
-      <li>Brain</li>
+      <li>Brain</li> <!-- Cambiado de Eye a Brain -->
     </appliedOnFixedBodyParts>
 
-    <addsHediff>ChipSubprocesamientoNeural</addsHediff>
+    <addsHediff>ChipAsistentePunteria</addsHediff>
 
     <ingredients>
       <li>
         <filter>
           <thingDefs>
-            <li>ChipSubprocesamientoNeural_Item</li>
+            <li>ChipAsistentePunteria_Item</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -38,20 +38,19 @@
             <li>Medicine</li>
           </categories>
         </filter>
-        <count>2</count>
+        <count>1</count>
       </li>
     </ingredients>
 
     <fixedIngredientFilter>
       <thingDefs>
-        <li>ChipSubprocesamientoNeural_Item</li>
+        <li>ChipAsistentePunteria_Item</li>
       </thingDefs>
       <categories>
         <li>Medicine</li>
       </categories>
     </fixedIngredientFilter>
 
-    <!-- ESTO ES LO QUE FALTABA -->
     <recipeUsers>
       <li>Human</li>
     </recipeUsers>
