@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ThingDef>
+        <defName>ExoesqueletoA_Item</defName>
+        <label>Exoesqueleto de Ataque</label>
+        <description>Un exoesqueleto diseñado para mejorar el rendimiento en combate</description>
+
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <techLevel>Spacer</techLevel>
+
+        <statBases>
+            <MarketValue>8000</MarketValue>
+            <Mass>0.3</Mass>
+            <WorkToMake>6000</WorkToMake>
+        </statBases>
+
+        <thingCategories>
+            <li>BodyParts</li>
+        </thingCategories>
+
+        <costList>
+            <ComponentSpacer>15</ComponentSpacer>
+            <Plasteel>200</Plasteel>
+            <Gold>100</Gold>
+            <Silver>100</Silver>
+        </costList>
+
+        <recipeMaker>
+            <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Implantes+</researchPrerequisite>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+
+        <comps>
+            <li Class="CompProperties_UseEffectInstallImplant">
+            <hediffDef>ChipSubprocesamientoNeural</hediffDef>
+            <bodyPart>Brain</bodyPart>
+            <canUpgrade>false</canUpgrade>
+          </li>
+        </comps>
+
+
+    </ThingDef>
+</Defs>

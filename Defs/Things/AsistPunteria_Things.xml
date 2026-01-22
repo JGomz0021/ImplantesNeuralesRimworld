@@ -50,7 +50,7 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>ImplantesNeurales</researchPrerequisite>
+      <researchPrerequisite>Implantes+</researchPrerequisite>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>

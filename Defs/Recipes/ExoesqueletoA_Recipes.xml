@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Recipe para instalar el Exoesqueleto de Ataque -->
+    <RecipeDef>
+        <defName>Install_Exoesqueleto_Ataque</defName>
+        <label>instalar exoesqueleto de ataque</label>
+        <description>Instala un exoesqueleto de ataque de cuerpo completo. Este procedimiento es extremadamente complejo y requiere habilidades quirúrgicas avanzadas.</description>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <jobString>Instalando exoesqueleto de ataque.</jobString>
+        <workAmount>5000</workAmount> <!-- Doble que una extremidad biónica (2500) -->
+        <skillRequirements>
+            <Medicine>8</Medicine> <!-- Requiere alta habilidad médica -->
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ExoesqueletoA_Item</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>3</count> <!-- Requiere más medicina que una cirugía normal -->
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ExoesqueletoA_Item</li>
+            </thingDefs>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li> <!-- Se instala en el torso (cuerpo completo) -->
+        </appliedOnFixedBodyParts>
+        <addsHediff>Exoesqueleto_Ataque</addsHediff>
+    </RecipeDef>
+
+    <!-- Recipe para remover el Exoesqueleto de Ataque -->
+    <RecipeDef>
+        <defName>Remove_Exoesqueleto_Ataque</defName>
+        <label>remover exoesqueleto de ataque</label>
+        <description>Remueve el exoesqueleto de ataque de cuerpo completo.</description>
+        <workerClass>Recipe_RemoveImplant</workerClass>
+        <jobString>Removiendo exoesqueleto de ataque.</jobString>
+        <workAmount>3000</workAmount> <!-- Remover también toma tiempo -->
+        <skillRequirements>
+            <Medicine>6</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <removesHediff>Exoesqueleto_Ataque</removesHediff>
+    </RecipeDef>
+
+</Defs>
