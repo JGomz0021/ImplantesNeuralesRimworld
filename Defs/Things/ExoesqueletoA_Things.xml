@@ -28,7 +28,7 @@
         </thingCategories>
 
         <costList>
-            <ComponentSpacer>15</ComponentSpacer>
+            <ComponentSpacer>10</ComponentSpacer>
             <Plasteel>200</Plasteel>
             <Gold>50</Gold>
             <Silver>100</Silver>

@@ -34,10 +34,10 @@
 
     <!-- Materiales necesarios para fabricar -->
     <costList>
-      <ComponentSpacer>10</ComponentSpacer>
-      <Plasteel>100</Plasteel>
-      <Gold>100</Gold>
-      <Silver>100</Silver>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Gold>20</Gold>
+      <Silver>20</Silver>
     </costList>
 
     <!-- Configuración de la receta de fabricación -->

@@ -25,7 +25,7 @@
 
     <costList>
       <SubcoreHigh>1</SubcoreHigh>
-      <ComponentSpacer>10</ComponentSpacer>
+      <ComponentSpacer>8</ComponentSpacer>
       <Plasteel>100</Plasteel>
       <Gold>100</Gold>
       <Silver>100</Silver>
