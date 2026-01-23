@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <HediffDef>
+        <defName>Exoesquelto_Trabajo</defName>
+        <label>exoesqueleto de trabajo</label>
+        <description>Un exoesqueleto disenado para el uso diario.</description>
+
+        <descriptionHyperLinks>
+            <ThingDef>ExoesqueletoT_Item</ThingDef>
+        </descriptionHyperLinks>
+
+        <hediffClass>Hediff_Implant</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+
+        <stages>
+            <li>
+                <!-- Bonos de capacidades -->
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>1.05</postFactor> <!-- +10% movimiento -->
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>1.15</postFactor> <!-- +5% manipulación -->
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>ExoesqueletoT_Item</spawnThingOnRemoved>
+    </HediffDef>
+</Defs>

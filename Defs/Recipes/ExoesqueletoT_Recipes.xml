@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <RecipeDef>
+        <defName>Install_Exoesqueleto_Trabajo</defName>
+        <label>instalar exoesqueleto de trabajo</label>
+        <description>Instala un exoesqueleto de uso diario, el proceso es extremadamente complejo y requiere un profundo conocimiento de anatomia humana.</description>
+
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <jobString>Instalando exoesqueleto de trabajo.</jobString>
+        <workAmount>5000</workAmount>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ExoesqueletoA_Item</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ExoesqueletoA_Item</li>
+            </thingDefs>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>Exoesqueleto_Ataque</addsHediff>
+    </RecipeDef>
+
+     <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>Remove_Exoesqueleto_trabajo</defName>
+        <label>remover exoesqueleto de trabajo</label>
+        <description>Remueve el exoesqueleto de trabajo de cuerpo completo.</description>
+        <workerClass>Recipe_RemoveImplant</workerClass>
+        <jobString>Removiendo exoesqueleto de trabajo.</jobString>
+        <workAmount>3000</workAmount>
+        <skillRequirements>
+            <Medicine>6</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <removesHediff>Exoesqueleto_Trabajo</removesHediff>
+    </RecipeDef>
+
+</Defs>

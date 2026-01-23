@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<def>
+
+    <ThingDef>
+        <defName>ExoesqueletoT_Item</defName>
+        <label>exoesqueleto de trabajo</label>
+        <description>Un exoesqueleto avanzado de cuerpo completo que mejora las capacidades de un Xenohumano en trabajos diarios.</description>
+        
+        <descriptionHyperlinks>
+            <RecipeDef>Install_Exoesqueleto_Trabajo</RecipeDef>
+        </descriptionHyperlinks>
+
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <techLevel>Spacer</techLevel>
+
+        <statBases>
+            <MarketValue>6000</MarketValue>
+            <Mass>2.5</Mass>
+            <WorkToMake>8000</WorkToMake>
+        </statBases>
+
+        <thingCategories>
+            <li>BodyPartsUltra</li>
+        </thingCategories>
+
+        <costList>
+            <ComponentSpacer>8</ComponentSpacer>
+            <Plasteel>150</Plasteel>
+            <Gold>20</Gold>
+            <Silver>100</Silver>
+        </costList>
+
+         <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+
+    </ThingDef>
+</def>
