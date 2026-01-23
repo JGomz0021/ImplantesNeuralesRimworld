@@ -2,14 +2,15 @@
 
 <Defs>
 
-    <HediffDef>
-        <defName>Exoesquelto_Trabajo</defName>
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>Exoesqueleto_Trabajo</defName>
         <label>exoesqueleto de trabajo</label>
-        <description>Un exoesqueleto disenado para el uso diario.</description>
+        <labelNoun>un exoesqueleto de trabajo</labelNoun>
+        <description>Un exoesqueleto diseñado para el uso diario.</description>
 
-        <descriptionHyperLinks>
+        <descriptionHyperlinks>
             <ThingDef>ExoesqueletoT_Item</ThingDef>
-        </descriptionHyperLinks>
+        </descriptionHyperlinks>
 
         <hediffClass>Hediff_Implant</hediffClass>
         <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
@@ -18,19 +19,25 @@
 
         <stages>
             <li>
-                <!-- Bonos de capacidades -->
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
-                        <postFactor>1.05</postFactor> <!-- +10% movimiento -->
+                        <postFactor>1.05</postFactor> <!-- +5% movimiento -->
                     </li>
                     <li>
                         <capacity>Manipulation</capacity>
-                        <postFactor>1.15</postFactor> <!-- +5% manipulación -->
+                        <postFactor>1.15</postFactor> <!-- +15% manipulación -->
                     </li>
                 </capMods>
             </li>
         </stages>
+        
         <spawnThingOnRemoved>ExoesqueletoT_Item</spawnThingOnRemoved>
+        
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+        </addedPartProps>
     </HediffDef>
+
 </Defs>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<def>
+<Defs>
 
     <ThingDef>
         <defName>ExoesqueletoT_Item</defName>
         <label>exoesqueleto de trabajo</label>
         <description>Un exoesqueleto avanzado de cuerpo completo que mejora las capacidades de un Xenohumano en trabajos diarios.</description>
         
+        <thingClass>ThingWithComps</thingClass>
+
         <descriptionHyperlinks>
             <RecipeDef>Install_Exoesqueleto_Trabajo</RecipeDef>
         </descriptionHyperlinks>
@@ -51,4 +53,4 @@
         </recipeMaker>
 
     </ThingDef>
-</def>
+</Defs>
