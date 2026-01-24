@@ -36,8 +36,8 @@
     <costList>
       <ComponentSpacer>4</ComponentSpacer>
       <Plasteel>50</Plasteel>
-      <Gold>20</Gold>
-      <Silver>20</Silver>
+      <Gold>2</Gold>
+      <Silver>2</Silver>
     </costList>
 
     <!-- Configuración de la receta de fabricación -->

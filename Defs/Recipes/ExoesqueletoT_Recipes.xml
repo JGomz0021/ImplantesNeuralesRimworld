@@ -3,7 +3,7 @@
 <Defs>
 
     <!-- Install Recipe -->
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Exoesqueleto_Trabajo</defName>
         <label>instalar exoesqueleto de trabajo</label>
         <description>Instala un exoesqueleto de uso diario, el proceso es extremadamente complejo y requiere un profundo conocimiento de anatomía humana.</description>

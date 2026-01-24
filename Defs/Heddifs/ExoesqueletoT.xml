@@ -34,10 +34,8 @@
         
         <spawnThingOnRemoved>ExoesqueletoT_Item</spawnThingOnRemoved>
         
-        <addedPartProps>
-            <solid>true</solid>
-            <partEfficiency>1.0</partEfficiency>
-        </addedPartProps>
+        <!-- ✓ ELIMINADO addedPartProps - no es necesario para implantes -->
+        
     </HediffDef>
 
 </Defs>

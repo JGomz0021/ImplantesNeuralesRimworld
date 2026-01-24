@@ -2,13 +2,11 @@
 
 <Defs>
 
-    <ThingDef>
+    <ThingDef ParentName="BodyPartBionicBase">
         <defName>ExoesqueletoT_Item</defName>
         <label>exoesqueleto de trabajo</label>
         <description>Un exoesqueleto avanzado de cuerpo completo que mejora las capacidades de un Xenohumano en trabajos diarios.</description>
         
-        <thingClass>ThingWithComps</thingClass>
-
         <descriptionHyperlinks>
             <RecipeDef>Install_Exoesqueleto_Trabajo</RecipeDef>
         </descriptionHyperlinks>
@@ -26,18 +24,15 @@
             <WorkToMake>8000</WorkToMake>
         </statBases>
 
-        <thingCategories>
-            <li>BodyPartsUltra</li>
-        </thingCategories>
 
         <costList>
             <ComponentSpacer>8</ComponentSpacer>
             <Plasteel>150</Plasteel>
-            <Gold>20</Gold>
-            <Silver>100</Silver>
+            <Gold>2</Gold>
+            <Silver>10</Silver>
         </costList>
 
-         <recipeMaker>
+        <recipeMaker>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Smith</effectWorking>
@@ -53,4 +48,5 @@
         </recipeMaker>
 
     </ThingDef>
+
 </Defs>

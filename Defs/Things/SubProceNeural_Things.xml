@@ -27,8 +27,8 @@
       <SubcoreHigh>1</SubcoreHigh>
       <ComponentSpacer>8</ComponentSpacer>
       <Plasteel>100</Plasteel>
-      <Gold>100</Gold>
-      <Silver>100</Silver>
+      <Gold>10</Gold>
+      <Silver>10</Silver>
       <NanostructuringChip>1</NanostructuringChip>
     </costList>
 

@@ -23,15 +23,11 @@
             <WorkToMake>8000</WorkToMake>
         </statBases>
 
-        <thingCategories>
-            <li>BodyPartsUltra</li>
-        </thingCategories>
-
         <costList>
             <ComponentSpacer>10</ComponentSpacer>
             <Plasteel>200</Plasteel>
-            <Gold>50</Gold>
-            <Silver>100</Silver>
+            <Gold>5</Gold>
+            <Silver>10</Silver>
         </costList>
 
         <recipeMaker>
