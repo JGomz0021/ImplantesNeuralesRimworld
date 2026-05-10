@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>Install_ImplanteReguladorVigilia</defName>
+    <label>instalar regulador de vigilia continua</label>
+    <description>Instala un regulador de vigilia continua en el torso del objetivo.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Instalando regulador de vigilia continua.</jobString>
+    <workAmount>2400</workAmount>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ImplanteReguladorVigilia</addsHediff>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ImplanteReguladorVigilia_Item</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ImplanteReguladorVigilia_Item</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Remove_ImplanteReguladorVigilia</defName>
+    <label>remover regulador de vigilia continua</label>
+    <description>Remueve el regulador de vigilia continua del torso.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <jobString>Removiendo regulador de vigilia continua.</jobString>
+    <workAmount>1900</workAmount>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>ImplanteReguladorVigilia</removesHediff>
+  </RecipeDef>
+
+</Defs>

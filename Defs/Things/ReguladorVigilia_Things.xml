@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ImplanteReguladorVigilia_Item</defName>
+    <label>regulador de vigilia continua</label>
+    <description>Regulador neurofisiológico de cuerpo completo. Mantiene estable el descanso y elimina la necesidad de dormir.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+
+    <statBases>
+      <MarketValue>3600</MarketValue>
+      <Mass>0.5</Mass>
+      <WorkToMake>4200</WorkToMake>
+    </statBases>
+
+    <thingCategories>
+      <li>BodyParts</li>
+    </thingCategories>
+
+    <costList>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Plasteel>60</Plasteel>
+      <Gold>12</Gold>
+      <Uranium>25</Uranium>
+    </costList>
+
+    <recipeMaker>
+      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>ImplanteReguladorVigilia</hediffDef>
+        <bodyPart>Torso</bodyPart>
+        <canUpgrade>false</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

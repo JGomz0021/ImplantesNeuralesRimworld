@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ImplanteReguladorVigilia</defName>
+    <label>regulador de vigilia continua</label>
+    <labelNoun>un regulador de vigilia continua</labelNoun>
+    <description>Implante corporal integral que suprime la caída del descanso, eliminando la necesidad de dormir.</description>
+
+    <descriptionHyperlinks>
+      <ThingDef>ImplanteReguladorVigilia_Item</ThingDef>
+    </descriptionHyperlinks>
+
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.75, 0.85, 0.95)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+
+    <stages>
+      <li>
+        <statFactors>
+          <RestFallRateFactor>0.0</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </stages>
+
+    <spawnThingOnRemoved>ImplanteReguladorVigilia_Item</spawnThingOnRemoved>
+  </HediffDef>
+
+</Defs>

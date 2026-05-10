@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ImplanteMetabolicoTotal_Item</defName>
+    <label>núcleo metabólico total</label>
+    <description>Núcleo de regulación metabólica de cuerpo completo. Anula la necesidad de ingesta para su portador.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <techLevel>Spacer</techLevel>
+
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <Mass>0.5</Mass>
+      <WorkToMake>3800</WorkToMake>
+    </statBases>
+
+    <thingCategories>
+      <li>BodyParts</li>
+    </thingCategories>
+
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>55</Plasteel>
+      <Gold>10</Gold>
+      <Uranium>20</Uranium>
+    </costList>
+
+    <recipeMaker>
+      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+
+    <comps>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>ImplanteMetabolicoTotal</hediffDef>
+        <bodyPart>Torso</bodyPart>
+        <canUpgrade>false</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

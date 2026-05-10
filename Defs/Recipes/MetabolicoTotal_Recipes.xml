@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>Install_ImplanteMetabolicoTotal</defName>
+    <label>instalar núcleo metabólico total</label>
+    <description>Instala un núcleo metabólico total en el torso del objetivo.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Instalando núcleo metabólico total.</jobString>
+    <workAmount>2200</workAmount>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ImplanteMetabolicoTotal</addsHediff>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ImplanteMetabolicoTotal_Item</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ImplanteMetabolicoTotal_Item</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Remove_ImplanteMetabolicoTotal</defName>
+    <label>remover núcleo metabólico total</label>
+    <description>Remueve el núcleo metabólico total del torso.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <jobString>Removiendo núcleo metabólico total.</jobString>
+    <workAmount>1800</workAmount>
+    <skillRequirements>
+      <Medicine>6</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>ImplanteMetabolicoTotal</removesHediff>
+  </RecipeDef>
+
+</Defs>
