@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>Servomotores_Musculares</defName>
+        <label>servomotores musculares</label>
+        <labelNoun>unos servomotores musculares</labelNoun>
+        <description>Un sistema de actuadores implantados que refuerza la musculatura y permite al portador soportar mejor los impactos y esfuerzos físicos.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ServomotoresMusculares_Item</ThingDef>
+        </descriptionHyperlinks>
+        <hediffClass>Hediff_Implant</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+        <stages>
+            <li>
+                <statFactors>
+                    <MaxHitPoints>1.10</MaxHitPoints>
+                    <BluntDamageFactor>0.85</BluntDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>ServomotoresMusculares_Item</spawnThingOnRemoved>
+    </HediffDef>
+
+</Defs>
