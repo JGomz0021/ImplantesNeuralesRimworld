@@ -2,37 +2,27 @@
 <Defs>
 
   <ThingDef ParentName="BodyPartBionicBase">
-    <!-- Identificador único interno del item -->
     <defName>ChipAsistentePunteria_Item</defName>
-    
-    <!-- Nombre visible en el juego -->
     <label>chip asistente de puntería</label>
-    
-    <!-- Descripción que aparece en el juego -->
     <description>Chip que se implanta en un ojo, realiza cálculos de balística y se los proporciona al usuario para una mejor precisión.</description>
 
-    <!-- Configuración gráfica -->
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 
-    <!-- Nivel tecnológico: Medieval, Industrial, Spacer, Ultra, Archotech -->
     <techLevel>Spacer</techLevel>
 
-    <!-- Estadísticas base del item -->
     <statBases>
       <MarketValue>5000</MarketValue>
       <Mass>0.3</Mass>
       <WorkToMake>4000</WorkToMake>
     </statBases>
 
-    <!-- Categorías para almacenamiento -->
     <thingCategories>
       <li>BodyParts</li>
     </thingCategories>
 
-    <!-- Materiales necesarios para fabricar -->
     <costList>
       <ComponentSpacer>4</ComponentSpacer>
       <Plasteel>50</Plasteel>
@@ -40,7 +30,6 @@
       <Silver>2</Silver>
     </costList>
 
-    <!-- Configuración de la receta de fabricación -->
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
@@ -50,18 +39,17 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>
     </recipeMaker>
 
-    <!-- Componentes del item -->
     <comps>
       <li Class="CompProperties_UseEffectInstallImplant">
         <hediffDef>ChipAsistentePunteria</hediffDef>
         <bodyPart>Eye</bodyPart>
-        <canUpgrade>false</canUpgrade> <!-- No reemplaza otros implantes oculares -->
+        <canUpgrade>false</canUpgrade>
       </li>
     </comps>
   </ThingDef>

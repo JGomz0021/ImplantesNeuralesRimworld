@@ -2,23 +2,25 @@
 <Defs>
 
   <ResearchProjectDef>
-    <defName>ImplantesExtra</defName>
-    <label>implantes neurales</label>
-    <description>Desarrollo de implantes especializados que mejoran diferentes aspectos del cuerpo.</description>
+    <defName>ImplantesAvanzados</defName>
+    <label>implantes avanzados</label>
+    <description>Desarrollo de implantes neurales avanzados para mejorar las capacidades de humanos y mecanizadores.</description>
 
     <baseCost>5000</baseCost>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
 
     <prerequisites>
-      <li>UltraMechtech</li>
-      <li>AdvancedFabrication</li>
       <li>Bionics</li>
+      <li>UltraMechtech</li>
     </prerequisites>
 
     <researchViewX>19.0</researchViewX>
     <researchViewY>4.5</researchViewY>
 
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
   </ResearchProjectDef>
 
 </Defs>
