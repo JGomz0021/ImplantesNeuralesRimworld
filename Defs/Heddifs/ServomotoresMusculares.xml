@@ -17,7 +17,7 @@
             <li>
                 <statFactors>
                     <!-- Mejora la supervivencia efectiva sin usar MaxHitPoints, que no se aplica a Pawns mediante Hediffs. -->
-                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                    <IncomingDamageFactor>0.90</IncomingDamageFactor>
                     <MoveSpeed>1.05</MoveSpeed>
                 </statFactors>
                 <capMods>
@@ -32,10 +32,6 @@
                 </capMods>
             </li>
         </stages>
-        <damageFactors>
-            <Blunt>0.90</Blunt>
-            <Cut>0.90</Cut>
-        </damageFactors>
         <spawnThingOnRemoved>ServomotoresMusculares_Item</spawnThingOnRemoved>
     </HediffDef>
 

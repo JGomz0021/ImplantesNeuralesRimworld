@@ -14,8 +14,8 @@ Mod para **RimWorld 1.6** que incorpora implantes neurales y corporales para col
 - **Chip asistente de puntería:** se instala en un ojo y concede +5 puntos porcentuales de precisión de disparo.
 - **Exoesqueleto de ataque:** mejora combate cuerpo a cuerpo, movilidad y manipulación; concede +10 puntos porcentuales de precisión de disparo y +5 de esquiva cuerpo a cuerpo.
 - **Exoesqueleto de trabajo:** mejora movilidad y manipulación para tareas diarias.
-- **Refuerzo óseo:** reduce un 25% el daño contundente. Al recibir menos daño de impactos, disminuye indirectamente el riesgo de fracturas; RimWorld no ofrece un modificador XML genérico de probabilidad de fractura para Hediffs.
-- **Servomotores musculares:** mejoran movilidad y manipulación en un 10%, velocidad de movimiento en un 5%, reducen el daño total recibido en un 5% y reducen en un 10% el daño contundente y cortante.
+- **Refuerzo óseo:** reduce un 15% todo el daño recibido. Esto mejora la resistencia a impactos y disminuye indirectamente el riesgo de fracturas; RimWorld no ofrece un modificador XML genérico de probabilidad de fractura ni de daño por tipo para Hediffs.
+- **Servomotores musculares:** mejoran movilidad y manipulación en un 10%, velocidad de movimiento en un 5% y reducen un 10% todo el daño recibido, aumentando la supervivencia frente a golpes, cortes y otras heridas.
 
 Los implantes se fabrican en el banco de fabricación y la mayor parte se desbloquea con la investigación **Implantes avanzados**. Esta requiere Biónica y UltraMechtech.
 

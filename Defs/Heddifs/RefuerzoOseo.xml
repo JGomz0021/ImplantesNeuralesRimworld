@@ -13,9 +13,14 @@
         <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
         <isBad>false</isBad>
         <priceImpact>true</priceImpact>
-        <damageFactors>
-            <Blunt>0.75</Blunt>
-        </damageFactors>
+        <stages>
+            <li>
+                <statFactors>
+                    <!-- HediffDef no admite damageFactors; esta resistencia reduce el daño recibido de forma válida. -->
+                    <IncomingDamageFactor>0.85</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
         <spawnThingOnRemoved>RefuerzoOseo_Item</spawnThingOnRemoved>
     </HediffDef>
 

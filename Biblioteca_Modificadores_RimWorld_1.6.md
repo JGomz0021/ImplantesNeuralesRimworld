@@ -109,23 +109,11 @@ Para el **Chip de regulación del sueño**, el modificador correcto para la espe
 
 Estos son contenido de **Biotech** y deben estar protegidos con `MayRequire="Ludeon.RimWorld.Biotech"` cuando corresponda en Defs que puedan cargarse sin Biotech.
 
-## 2. Campos de daño específicos de Hediff
+## 2. Resistencia al daño en Hediffs
 
-No todo modificador de daño es un `StatDef`.
+`damageFactors` **no es un campo de `HediffDef`**. Es una propiedad usada, por ejemplo, por `GeneDef`; añadirla a un Hediff provoca un error de carga XML.
 
-Un `HediffDef` puede utilizar:
-
-```xml
-<damageFactors>
-  <Blunt>0.85</Blunt>
-</damageFactors>
-```
-
-Esto es diferente de `<statFactors>` y sirve para modificar tipos concretos de `DamageDef`.
-
-Ejemplos de tipos de daño que pueden aparecer en `damageFactors` incluyen `Blunt`, `Cut`, `Burn`, `Flame`, `Bullet`, `Stab`, etc., dependiendo de los `DamageDef` cargados.
-
-**Para resistencia general al daño**, el `StatDef` confirmado es:
+Para resistencia válida en un Hediff, utilizar el `StatDef` `IncomingDamageFactor` dentro de una etapa:
 
 ```xml
 <statFactors>
@@ -139,7 +127,8 @@ Estos nombres fueron usados en versiones del mod, pero **no deben considerarse m
 
 | Nombre | Problema | Alternativa |
 |---|---|---|
-| `BluntDamageFactor` | No es el StatDef correcto para reducir daño contundente recibido por un peón. El `BluntDamageMultiplier` existe en el contexto de materiales/armas, no como defensa de un Pawn. | `<damageFactors><Blunt>...</Blunt></damageFactors>` o `IncomingDamageFactor` |
+| `BluntDamageFactor` | No es el StatDef correcto para reducir daño contundente recibido por un peón. El `BluntDamageMultiplier` existe en el contexto de materiales/armas, no como defensa de un Pawn. | `IncomingDamageFactor` dentro de una etapa del Hediff. |
+| `damageFactors` | No es un campo de `HediffDef`; usarlo provoca un error de carga XML. | `IncomingDamageFactor` para resistencia global; por tipo de daño se requiere otro sistema. |
 | `BoneDamageFactor` | No existe como StatDef vanilla para Hediffs. | Requiere otro sistema; no existe un multiplicador XML genérico de daño por parte ósea. |
 | `FractureChanceFactor` | No existe como StatDef vanilla para Hediffs. | Requiere código/una mecánica específica; no debe inventarse como StatDef. |
 | `MaxHitPoints` | Existe como StatDef, pero corresponde principalmente a objetos/ThingDefs y no es un modificador genérico de salud máxima de Pawn mediante Hediff. | Para aumentar la salud de un Pawn hay que usar el sistema de salud/cuerpo apropiado; no asumir que `<statFactors><MaxHitPoints>` funcionará en un Hediff. |
@@ -152,7 +141,7 @@ RimWorld tiene varios sistemas diferentes:
 
 1. **Stats** → `<statOffsets>` / `<statFactors>`
 2. **Capacidades** → `<capMods>`
-3. **Daño por tipo** → `<damageFactors>`
+3. **Resistencia global de un Hediff** → `IncomingDamageFactor` en `<statFactors>`
 4. **Propiedades de partes corporales** → `<addedPartProps>`
 5. **Comportamientos especiales** → `comps` / clases C#
 
