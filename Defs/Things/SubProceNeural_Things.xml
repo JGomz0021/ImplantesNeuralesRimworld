@@ -11,7 +11,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
 
     <statBases>
       <MarketValue>8000</MarketValue>
@@ -41,7 +41,7 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+      <researchPrerequisite>ImplantesAvanzados</researchPrerequisite>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>
@@ -57,4 +57,3 @@
   </ThingDef>
 
 </Defs>
-
