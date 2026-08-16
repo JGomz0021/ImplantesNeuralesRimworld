@@ -41,14 +41,14 @@
 
         <!-- Stats -->
         <statOffsets>
-          <MechBandwidth>12</MechBandwidth>
+          <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">12</MechBandwidth>
           <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups> <!-- +1 grupo de control de mecas -->
+          <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">0.10</WorkSpeedGlobalOffsetMech> <!-- +10% velocidad de trabajo de mecas -->
         </statOffsets>
 
         <statFactors>
           <RestRateMultiplier>1.05</RestRateMultiplier> <!-- +5% tasa de descanso -->
           <MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">1.15</MechRepairSpeed> <!-- +15% velocidad de reparación de mecas -->
-          <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">1.10</WorkSpeedGlobalOffsetMech> <!-- +10% velocidad de trabajo de mecas -->
         </statFactors>
 
       </li>

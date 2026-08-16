@@ -20,8 +20,8 @@
             <li>
                 <!-- Bonos de estadísticas con statOffsets -->
                 <statOffsets>
-                    <ShootingAccuracyPawn>1.0</ShootingAccuracyPawn> <!-- +1.0 precisión de disparo -->
-                    <MeleeDodgeChance>1.0</MeleeDodgeChance> <!-- +1.0 probabilidad de esquivar -->
+                    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn> <!-- +10 puntos porcentuales de precisión de disparo -->
+                    <MeleeDodgeChance>0.05</MeleeDodgeChance> <!-- +5 puntos porcentuales de probabilidad de esquivar -->
                 </statOffsets>
 
                 <!-- Bonos multiplicadores con statFactors -->

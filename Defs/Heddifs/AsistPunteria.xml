@@ -21,7 +21,7 @@
 
         <!-- Usar statOffsets, NO statFactors -->
         <statOffsets>
-          <ShootingAccuracyPawn>3</ShootingAccuracyPawn> <!-- +3 de precisión -->
+          <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn> <!-- +5 puntos porcentuales de precisión -->
         </statOffsets>
 
       </li>

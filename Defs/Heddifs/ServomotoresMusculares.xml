@@ -5,7 +5,7 @@
         <defName>Servomotores_Musculares</defName>
         <label>servomotores musculares</label>
         <labelNoun>unos servomotores musculares</labelNoun>
-        <description>Un sistema de actuadores implantados que refuerza la musculatura y permite al portador soportar mejor los impactos y esfuerzos físicos.</description>
+        <description>Un sistema de actuadores implantados que mejora la capacidad física general del portador. Aumenta su movilidad y manipulación, y refuerza su supervivencia frente a golpes y cortes.</description>
         <descriptionHyperlinks>
             <ThingDef>ServomotoresMusculares_Item</ThingDef>
         </descriptionHyperlinks>
@@ -16,11 +16,26 @@
         <stages>
             <li>
                 <statFactors>
-                    <MaxHitPoints>1.10</MaxHitPoints>
-                    <BluntDamageFactor>0.85</BluntDamageFactor>
+                    <!-- Mejora la supervivencia efectiva sin usar MaxHitPoints, que no se aplica a Pawns mediante Hediffs. -->
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                    <MoveSpeed>1.05</MoveSpeed>
                 </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>1.10</postFactor>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>1.10</postFactor>
+                    </li>
+                </capMods>
             </li>
         </stages>
+        <damageFactors>
+            <Blunt>0.90</Blunt>
+            <Cut>0.90</Cut>
+        </damageFactors>
         <spawnThingOnRemoved>ServomotoresMusculares_Item</spawnThingOnRemoved>
     </HediffDef>
 
