@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Defs>
 
     <ThingDef ParentName="BodyPartBionicBase">
@@ -16,14 +15,13 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
 
-        <techLevel>Spacer</techLevel>
+        <techLevel>Ultra</techLevel>
 
         <statBases>
             <MarketValue>6000</MarketValue>
             <Mass>2.5</Mass>
             <WorkToMake>8000</WorkToMake>
         </statBases>
-
 
         <costList>
             <ComponentSpacer>8</ComponentSpacer>
@@ -41,7 +39,7 @@
             <skillRequirements>
                 <Crafting>10</Crafting>
             </skillRequirements>
-            <researchPrerequisite>ImplantesExtra</researchPrerequisite>
+            <researchPrerequisite>ImplantesAvanzados</researchPrerequisite>
             <recipeUsers>
                 <li>FabricationBench</li>
             </recipeUsers>
