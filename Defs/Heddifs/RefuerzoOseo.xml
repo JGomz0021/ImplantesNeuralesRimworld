@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>Refuerzo_Oseo</defName>
+        <label>refuerzo óseo</label>
+        <labelNoun>un refuerzo óseo</labelNoun>
+        <description>Una estructura interna de materiales reforzados que fortalece el esqueleto y reduce el riesgo y la gravedad de las lesiones óseas.</description>
+        <descriptionHyperlinks>
+            <ThingDef>RefuerzoOseo_Item</ThingDef>
+        </descriptionHyperlinks>
+        <hediffClass>Hediff_Implant</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+        <stages>
+            <li>
+                <statFactors>
+                    <BoneDamageFactor>0.85</BoneDamageFactor>
+                    <FractureChanceFactor>0.75</FractureChanceFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>RefuerzoOseo_Item</spawnThingOnRemoved>
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>Install_Refuerzo_Oseo</defName>
+        <label>instalar refuerzo óseo</label>
+        <description>Instala un refuerzo óseo que protege el esqueleto del usuario.</description>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <jobString>Instalando refuerzo óseo.</jobString>
+        <workAmount>5000</workAmount>
+        <skillRequirements><Medicine>8</Medicine></skillRequirements>
+        <ingredients>
+            <li><filter><thingDefs><li>RefuerzoOseo_Item</li></thingDefs></filter><count>1</count></li>
+            <li><filter><categories><li>Medicine</li></categories></filter><count>3</count></li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs><li>RefuerzoOseo_Item</li></thingDefs>
+            <categories><li>Medicine</li></categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts><li>Torso</li></appliedOnFixedBodyParts>
+        <addsHediff>Refuerzo_Oseo</addsHediff>
+    </RecipeDef>
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>Remove_Refuerzo_Oseo</defName>
+        <label>remover refuerzo óseo</label>
+        <description>Remueve el refuerzo óseo.</description>
+        <workerClass>Recipe_RemoveImplant</workerClass>
+        <jobString>Removiendo refuerzo óseo.</jobString>
+        <workAmount>3000</workAmount>
+        <skillRequirements><Medicine>6</Medicine></skillRequirements>
+        <ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li></ingredients>
+        <fixedIngredientFilter><categories><li>Medicine</li></categories></fixedIngredientFilter>
+        <appliedOnFixedBodyParts><li>Torso</li></appliedOnFixedBodyParts>
+        <removesHediff>Refuerzo_Oseo</removesHediff>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>ChipRegulacionSueno_Item</defName>
+        <label>chip de regulación del sueño</label>
+        <description>Un implante neural que optimiza los ciclos de sueño y permite recuperar el descanso con mayor rapidez.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>Install_Chip_Regulacion_Sueno</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Ultra</techLevel>
+        <statBases>
+            <MarketValue>4500</MarketValue>
+            <Mass>0.3</Mass>
+            <WorkToMake>6000</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>BodyParts</li>
+        </thingCategories>
+        <costList>
+            <ComponentSpacer>4</ComponentSpacer>
+            <Plasteel>75</Plasteel>
+            <Gold>3</Gold>
+            <SubcoreHigh>1</SubcoreHigh>
+        </costList>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ImplantesAvanzados</researchPrerequisite>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <comps>
+            <li Class="CompProperties_UseEffectInstallImplant">
+                <hediffDef>Chip_Regulacion_Sueno</hediffDef>
+                <bodyPart>Brain</bodyPart>
+                <canUpgrade>false</canUpgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>
