@@ -16,7 +16,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <RestRateFactor>1.50</RestRateFactor>
+                    <RestRateMultiplier>1.50</RestRateMultiplier>
                 </statFactors>
             </li>
         </stages>
