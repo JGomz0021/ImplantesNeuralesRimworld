@@ -1,173 +1,171 @@
 # Biblioteca de modificadores — RimWorld 1.6
 
-Biblioteca interna para el desarrollo de **Implantes Neurales**.
+Referencia para implantes y otros `HediffDef`. Reúne los `StatDef` de las categorías Pawn en Core 1.6, Biotech e Ideology, y los campos propios de una etapa de Hediff.
 
-> Objetivo: evitar usar nombres de campos inventados o pertenecientes a otro tipo de Def. Cada modificador de esta lista debe considerarse apto solo cuando su tipo de uso está indicado explícitamente.
+> Alcance: son modificadores candidatos para un peón. Que un StatDef exista no asegura que afecte a todos los peones o situaciones; siempre hay que probarlo en juego. Quedan fuera los stats exclusivos de armas, edificios, materiales, ropa y objetos.
 
-## 1. Modificadores confirmados para `<HediffDef>` → `<stages>`
+## Uso correcto en Hediffs
 
-Estos nombres aparecen como `StatDef` reales de RimWorld y pueden utilizarse dentro de `<statOffsets>` o `<statFactors>` cuando el tipo de stat lo permita.
+Los stats se sitúan dentro de una etapa. `statOffsets` suma una cantidad; `statFactors` multiplica el valor (`1.10` = +10%, `0.85` = −15%).
 
-### Combate
+```xml
+<stages>
+  <li>
+    <statOffsets><ShootingAccuracyPawn>0.05</ShootingAccuracyPawn></statOffsets>
+    <statFactors><MoveSpeed>1.10</MoveSpeed></statFactors>
+  </li>
+</stages>
+```
 
-| DefName | Uso | Tipo recomendado |
+## Combate
+
+| DefName | Tipo habitual | Efecto / nota |
 |---|---|---|
-| `ShootingAccuracyPawn` | Precisión de disparo del peón | `statOffsets` |
-| `MeleeDodgeChance` | Probabilidad de esquivar en melee | `statOffsets` |
-| `MeleeHitChance` | Probabilidad de acertar ataques melee | `statOffsets` |
-| `MeleeDamageFactor` | Multiplicador del daño melee | `statFactors` |
-| `MeleeCooldownFactor` | Multiplicador del tiempo de recuperación entre ataques melee | `statFactors` |
-| `AimingDelayFactor` | Multiplicador del tiempo de apuntado | `statFactors` |
-| `IncomingDamageFactor` | Multiplicador de todo el daño recibido | `statFactors` |
-| `StaggerDurationFactor` | Multiplicador de la duración del stagger | `statFactors` |
-| `ShootingAccuracyFactor_Touch` | Multiplicador de precisión a corta distancia | `statFactors` |
-| `ShootingAccuracyFactor_Short` | Multiplicador de precisión a distancia corta | `statFactors` |
-| `ShootingAccuracyFactor_Medium` | Multiplicador de precisión a distancia media | `statFactors` |
-| `ShootingAccuracyFactor_Long` | Multiplicador de precisión a larga distancia | `statFactors` |
+| `ShootingAccuracyPawn` | offset | Precisión base. `0.05` = +5 puntos porcentuales; no usar enteros como `1` o `3`. |
+| `ShootingAccuracyFactor_Touch`, `ShootingAccuracyFactor_Short`, `ShootingAccuracyFactor_Medium`, `ShootingAccuracyFactor_Long` | factor | Precisión por tramo de distancia. |
+| `AimingDelayFactor` | factor | Tiempo de apuntado; menor que `1` es más rápido. |
+| `RangedCooldownFactor` | factor | Recuperación tras disparar; menor es más rápido. |
+| `MeleeDamageFactor` | factor | Daño melee infligido. |
+| `MeleeCooldownFactor` | factor | Recuperación entre ataques melee; menor aumenta DPS. |
+| `MeleeHitChance` | offset | Probabilidad de impactar en melee. |
+| `MeleeDodgeChance` | offset | Probabilidad de esquivar melee; usar valores pequeños (`0.03`–`0.05`). |
+| `MeleeArmorPenetration` | offset | Penetración de ataques melee; depende también del arma. |
+| `MeleeDoorDamageFactor` | factor | Daño melee contra puertas; Biotech. |
+| `PawnTrapSpringChance` | factor | Activar trampas; menor es mejor. |
+| `IncomingDamageFactor` | factor | Todo el daño recibido. Válido en una etapa de Hediff; `0.90` reduce 10%. |
+| `StaggerDurationFactor` | factor | Duración del tambaleo; menor es mejor. |
+| `MortarMissRadiusFactor` | factor | Error de morteros; menor es más preciso. |
+| `ShootingAccuracyChildFactor` | factor | Precisión de niños; Biotech, situacional. |
+| `MeleeDPS` | no usar | Valor informativo derivado de arma y otros stats. |
 
-### Movimiento y capacidades físicas
+### Combate condicionado por entorno (Ideology)
 
-| DefName | Uso | Tipo recomendado |
-|---|---|---|
-| `MoveSpeed` | Velocidad de movimiento | `statFactors` o `statOffsets` según el efecto buscado |
-| `CarryingCapacity` | Capacidad de carga | `statOffsets` |
+Usar como offsets y proteger con `MayRequire="Ludeon.RimWorld.Ideology"`:
 
-Para capacidades como `Moving`, `Manipulation`, `Consciousness` y `Sight`, usar `<capMods>`:
+- `ShootingAccuracyOutdoorsDarkOffset`, `ShootingAccuracyOutdoorsLitOffset`, `ShootingAccuracyIndoorsDarkOffset`, `ShootingAccuracyIndoorsLitOffset`
+- `MeleeHitChanceOutdoorsDarkOffset`, `MeleeHitChanceOutdoorsLitOffset`, `MeleeHitChanceIndoorsDarkOffset`, `MeleeHitChanceIndoorsLitOffset`
+- `MeleeDodgeChanceOutdoorsDarkOffset`, `MeleeDodgeChanceOutdoorsLitOffset`, `MeleeDodgeChanceIndoorsDarkOffset`, `MeleeDodgeChanceIndoorsLitOffset`
+
+## Capacidades corporales (`capMods`)
+
+No son StatDefs. Cada entrada admite `offset`, `postFactor` o `setMax`.
+
+| CapacityDef | Efecto |
+|---|---|
+| `Consciousness` | Consciencia general. |
+| `Moving` | Movilidad. |
+| `Manipulation` | Uso de manos, trabajo y puntería. |
+| `Sight`, `Hearing`, `Talking`, `Eating` | Sentidos y funciones correspondientes. |
+| `Breathing`, `BloodPumping`, `BloodFiltration`, `Metabolism` | Sistemas orgánicos. |
 
 ```xml
 <capMods>
-  <li>
-    <capacity>Moving</capacity>
-    <offset>0.10</offset>
-  </li>
+  <li><capacity>Moving</capacity><postFactor>1.10</postFactor></li>
+  <li><capacity>Manipulation</capacity><postFactor>1.10</postFactor></li>
 </capMods>
 ```
 
-También existe `<postFactor>` para multiplicar una capacidad:
+## Movimiento, salud y necesidades
 
-```xml
-<capMods>
-  <li>
-    <capacity>Manipulation</capacity>
-    <postFactor>1.10</postFactor>
-  </li>
-</capMods>
-```
-
-Capacidades vanilla relevantes confirmadas: `Consciousness`, `Moving`, `Manipulation`, `Breathing`, `BloodFiltration`, `BloodPumping`, `Metabolism`, `Eating`, `Talking`, `Hearing`, `Sight`.
-
-### Trabajo
-
-| DefName | Uso | Tipo recomendado |
+| DefName | Tipo habitual | Efecto |
 |---|---|---|
-| `WorkSpeedGlobal` | Multiplicador de velocidad de trabajo general | `statFactors` |
-| `MedicalTendSpeed` | Velocidad para tratar heridas/enfermedades | `statFactors` |
-| `MedicalTendQuality` | Calidad base de las curas | `statFactors`/`statOffsets` según diseño |
-| `MedicalOperationSpeed` | Velocidad de operaciones médicas | `statFactors` |
-| `MedicalSurgerySuccessChance` | Probabilidad base de éxito quirúrgico | `statFactors` |
-| `ConstructionSpeed` | Velocidad de construcción | `statFactors` |
-| `CookingSpeed` | Velocidad de cocina | `statFactors` |
-| `MiningSpeed` | Velocidad de minería | `statFactors` |
-| `ResearchSpeedFactor` | Velocidad de investigación | `statFactors` |
-| `PlantWorkSpeed` | Velocidad de trabajo con plantas | `statFactors` |
-| `CraftingSpeed` | Velocidad de fabricación | `statFactors` |
+| `MoveSpeed`, `CrawlSpeed`, `CaravanRidingSpeedFactor` | factor | Velocidad normal, arrastrándose o al montar. |
+| `CarryingCapacity` | offset | Carga máxima. |
+| `PainShockThreshold` | factor | Umbral para caer por shock de dolor. |
+| `InjuryHealingFactor`, `ImmunityGainSpeed` | factor | Curación de heridas e inmunidad. |
+| `LifespanFactor` | factor | Vida esperada. |
+| `ComfyTemperatureMin`, `ComfyTemperatureMax` | offset | Límites de temperatura confortable. |
+| `ToxicResistance`, `ToxicEnvironmentResistance`, `EMPResistance` | factor | Resistencia a toxicidad, ambiente tóxico y EMP. |
+| `MentalBreakThreshold` | offset | Umbral de ánimo para crisis mental. |
+| `MaxNutrition` | factor | Nutrición máxima. |
+| `BedHungerRateFactor` | factor | Consumo de hambre en cama; menor es mejor. |
+| `EatingSpeed` | factor | Velocidad al comer. |
+| `RestRateMultiplier` | factor | Recuperación de descanso al dormir. |
+| `RestFallRateFactor` | factor | Caída de descanso despierto; menor es mejor. |
+| `JoyFallRateFactor` | factor | Caída de alegría; menor es mejor. |
+| `FilthRate` | factor | Frecuencia con la que ensucia; menor es mejor. |
+| `ForagedNutritionPerDay` | offset/factor | Nutrición al forrajear. |
+| `MaxFlightTime`, `FlightCooldown` | offset/factor | Vuelo; depende del tipo de peón. |
 
-> Nota: los nombres anteriores son `StatDef` del juego; antes de implementar un implante concreto conviene comprobar además que el stat se aplica a **Pawn** y no a un objeto, edificio, arma o material.
+## Trabajo y producción
 
-### Sueño
-
-| DefName | Uso | Tipo recomendado |
+| DefName | Tipo habitual | Efecto |
 |---|---|---|
-| `RestRateMultiplier` | Multiplicador de la velocidad con la que una criatura recupera descanso mientras duerme | `statFactors` |
-| `RestFallRateFactor` | Multiplicador de la velocidad con la que cae la necesidad de sueño | `statFactors` |
+| `WorkSpeedGlobal`, `GeneralLaborSpeed` | factor | Velocidad global y de recetas generales. |
+| `ConstructionSpeed`, `ConstructSuccessChance`, `FixBrokenDownBuildingSuccessChance` | factor/offset | Construcción y reparación de averías. |
+| `MiningSpeed`, `MiningYield`, `DeepDrillingSpeed`, `SmoothingSpeed` | factor | Minería, rendimiento, perforación y alisado. |
+| `PlantWorkSpeed`, `PlantHarvestYield`, `DrugHarvestYield` | factor | Trabajo y cosechas vegetales. |
+| `ResearchSpeed`, `ReadingSpeed` | factor | Investigación/escaneo y lectura. |
+| `CleaningSpeed`, `HuntingStealth` | factor | Limpieza y sigilo de caza. |
+| `AnimalGatherSpeed`, `AnimalGatherYield` | factor | Ordeño, esquila y productos animales. |
+| `SmeltingSpeed`, `CookSpeed` | factor | Fundición y cocina. |
+| `FoodPoisonChance` | factor | Intoxicación de comida; menor es mejor. |
+| `DrugSynthesisSpeed`, `DrugCookingSpeed` | factor | Producción de drogas. |
+| `ButcheryFleshSpeed`, `ButcheryMechanoidSpeed` | factor | Velocidad de carnicería orgánica o mecanoide. |
+| `ButcheryFleshEfficiency`, `ButcheryMechanoidEfficiency` | factor | Rendimiento de carnicería. |
+| `HackingSpeed`, `HackingStealth` | factor | Pirateo. |
+| `PruningSpeed`, `SuppressionPower` | factor | Poda y supresión; Ideology. |
 
-**Importante:** `RestRateMultiplier` y `RestFallRateFactor` NO significan lo mismo.
+## Medicina, aprendizaje, psíquica y social
 
-- `RestRateMultiplier < 1`/`> 1` modifica la velocidad de recuperación mientras duerme.
-- `RestFallRateFactor < 1` hace que el sueño se consuma más lentamente durante la vigilia.
-
-Para el **Chip de regulación del sueño**, el modificador correcto para la especificación actual es:
-
-```xml
-<statFactors>
-  <RestRateMultiplier>1.50</RestRateMultiplier>
-</statFactors>
-```
-
-### Mecanización / Biotech
-
-| DefName | Uso | Tipo recomendado |
+| DefName | Tipo habitual | Efecto |
 |---|---|---|
-| `MechBandwidth` | Bandwidth disponible para el mecanizador | `statOffsets` |
-| `MechControlGroups` | Grupos de control disponibles | `statOffsets` |
-| `MechRepairSpeed` | Velocidad con la que el mecanizador repara mecas | `statFactors` |
-| `MechFormingSpeed` | Velocidad de gestación/formación de mecas | `statFactors` |
-| `MechRemoteRepairDistance` | Distancia de reparación remota | `statOffsets` |
-| `MechRemoteShieldDistance` | Distancia para escudo remoto | `statOffsets` |
-| `MechRemoteShieldEnergy` | Energía del escudo remoto | `statOffsets` |
-| `WorkSpeedGlobalOffsetMech` | Offset de velocidad de trabajo aplicado a los mecas controlados | `statOffsets` |
+| `MedicalTendSpeed`, `MedicalOperationSpeed` | factor | Curación y operaciones. |
+| `MedicalTendQuality`, `MedicalSurgerySuccessChance` | factor/offset | Calidad de cura y éxito quirúrgico. |
+| `PsychicSensitivity`, `PsychicEntropyMax`, `PsychicEntropyRecoveryRate`, `MeditationFocusGain` | factor/offset | Sistemas psíquicos. |
+| `GlobalLearningFactor`, `AnimalsLearningFactor` | factor | Aprendizaje humano y animal. |
+| `NegotiationAbility`, `SocialImpact`, `PawnBeauty`, `ArrestSuccessChance` | factor/offset | Interacciones sociales. |
+| `TradePriceImprovement`, `DrugSellPriceImprovement` | factor/offset | Precios de comercio. |
+| `TameAnimalChance`, `TrainAnimalChance`, `BondAnimalChanceFactor` | factor | Animales. |
+| `ConversionPower`, `CertaintyLossFactor`, `SocialIdeoSpreadFrequencyFactor` | factor | Ideology: conversión y certeza. |
+| `SlaveSuppressionFallRate` | factor | Ideology: caída de supresión; menor es mejor. |
+| `AnimalProductsSellImprovement`, `Terror` | factor/offset | Ideology: comercio animal y terror. |
 
-Estos son contenido de **Biotech** y deben estar protegidos con `MayRequire="Ludeon.RimWorld.Biotech"` cuando corresponda en Defs que puedan cargarse sin Biotech.
+## Mecanizadores y Biotech
 
-## 2. Resistencia al daño en Hediffs
+Proteger con `MayRequire="Ludeon.RimWorld.Biotech"` si Biotech no es dependencia obligatoria.
 
-`damageFactors` **no es un campo de `HediffDef`**. Es una propiedad usada, por ejemplo, por `GeneDef`; añadirla a un Hediff provoca un error de carga XML.
-
-Para resistencia válida en un Hediff, utilizar el `StatDef` `IncomingDamageFactor` dentro de una etapa:
-
-```xml
-<statFactors>
-  <IncomingDamageFactor>0.85</IncomingDamageFactor>
-</statFactors>
-```
-
-## 3. Modificadores que NO deben utilizarse como StatDef
-
-Estos nombres fueron usados en versiones del mod, pero **no deben considerarse modificadores válidos de `<statFactors>`**:
-
-| Nombre | Problema | Alternativa |
+| DefName | Tipo habitual | Efecto |
 |---|---|---|
-| `BluntDamageFactor` | No es el StatDef correcto para reducir daño contundente recibido por un peón. El `BluntDamageMultiplier` existe en el contexto de materiales/armas, no como defensa de un Pawn. | `IncomingDamageFactor` dentro de una etapa del Hediff. |
-| `damageFactors` | No es un campo de `HediffDef`; usarlo provoca un error de carga XML. | `IncomingDamageFactor` para resistencia global; por tipo de daño se requiere otro sistema. |
-| `BoneDamageFactor` | No existe como StatDef vanilla para Hediffs. | Requiere otro sistema; no existe un multiplicador XML genérico de daño por parte ósea. |
-| `FractureChanceFactor` | No existe como StatDef vanilla para Hediffs. | Requiere código/una mecánica específica; no debe inventarse como StatDef. |
-| `MaxHitPoints` | Existe como StatDef, pero corresponde principalmente a objetos/ThingDefs y no es un modificador genérico de salud máxima de Pawn mediante Hediff. | Para aumentar la salud de un Pawn hay que usar el sistema de salud/cuerpo apropiado; no asumir que `<statFactors><MaxHitPoints>` funcionará en un Hediff. |
+| `MechBandwidth`, `MechControlGroups` | offset | Ancho de banda y grupos de control. |
+| `WorkSpeedGlobalOffsetMech` | offset | Trabajo de mecas controlados. |
+| `MechRepairSpeed`, `MechFormingSpeed`, `SubcoreEncodingSpeed` | factor | Reparación, gestación y subnúcleos. |
+| `MechRemoteRepairDistance`, `MechRemoteShieldDistance`, `MechRemoteShieldEnergy` | offset | Reparación y escudo remotos. |
+| `MechEnergyUsageFactor`, `WastepacksPerRecharge`, `MechEnergyLossPerHP` | factor | Energía y residuos; menor es mejor. |
+| `BandwidthCost`, `ControlTakingTime` | factor | Coste y tiempo de control; situacional. |
+| `GrowthVatOccupantSpeed`, `LearningRateFactor` | factor | Tina de crecimiento y aprendizaje infantil. |
+| `Fertility`, `HemogenGainFactor`, `RawNutritionFactor`, `CancerRate` | factor/offset | Fertilidad, hemógeno, comida cruda y cáncer. |
+| `BiosculpterOccupantSpeed` | factor | Velocidad de ocupación del biosculptor; Ideology. |
 
-## 4. Errores de concepto que debemos evitar
+## Stats de peón existentes pero no apropiados para un implante general
 
-### `StatDef` ≠ capacidad ≠ campo especial
+| DefName | Por qué evitarlo |
+|---|---|
+| `MeatAmount`, `LeatherAmount` | Definen recursos que rinde un cadáver, no una mejora funcional del colono vivo. |
+| `MinimumHandlingSkill` | Requisito de manejo de animales; es una propiedad de la criatura. |
+| `Wildness` | Conducta base de animal salvaje; no es un bonus de implante. |
 
-RimWorld tiene varios sistemas diferentes:
+## Campos especiales de `HediffStage`
 
-1. **Stats** → `<statOffsets>` / `<statFactors>`
-2. **Capacidades** → `<capMods>`
-3. **Resistencia global de un Hediff** → `IncomingDamageFactor` en `<statFactors>`
-4. **Propiedades de partes corporales** → `<addedPartProps>`
-5. **Comportamientos especiales** → `comps` / clases C#
+No son StatDefs: `painOffset`, `painFactor`, `partEfficiencyOffset`, `partEfficiencyFactor`, `hungerRateFactorOffset`, `restFallFactor`, `makeImmuneTo`, `hediffGivers`, `mentalStateGivers`, `lifeThreatening`, `vomitMtbDays` y `deathMtbDays`.
 
-No se debe convertir automáticamente una propiedad del juego en un `<StatDef>` inventando su nombre.
+## No usar en Hediffs XML
 
-## 5. Modificadores comprobados directamente en el mod
+| Nombre | Motivo | Alternativa |
+|---|---|---|
+| `damageFactors` | No existe en `HediffDef`; provoca error XML. | `IncomingDamageFactor` para resistencia global. |
+| `BluntDamageFactor`, `BoneDamageFactor`, `FractureChanceFactor` | No son StatDefs válidos para un Hediff. | Daño global, capacidades o código C# específico. |
+| `MaxHitPoints` | Es de objetos; no aporta vida máxima genérica de Pawn mediante Hediff. | Curación, resistencia global o código C#. |
+| `ResearchSpeedFactor`, `CookingSpeed`, `CraftingSpeed` | No son los DefName Core apropiados. | `ResearchSpeed`, `CookSpeed`, `GeneralLaborSpeed`. |
+| Stats de arma, material, ropa o edificio | No afectan al peón como implante. | Usar la alternativa de categoría Pawn. |
 
-Los siguientes ya aparecen en Hediffs del proyecto y/o coinciden con ejemplos vanilla comprobados:
+## Validación y fuentes
 
-- `ShootingAccuracyPawn`
-- `MeleeDodgeChance`
-- `MeleeDamageFactor`
-- `MoveSpeed`
-- `MechBandwidth`
-- `MechControlGroups`
-- `MechRepairSpeed`
-- `WorkSpeedGlobalOffsetMech`
-- `RestRateMultiplier`
+1. Buscar el DefName exacto en `Data/*/Defs/Stats` de la versión objetivo.
+2. Confirmar que pertenece a una categoría Pawn y colocarlo dentro de `stages/li`.
+3. Proteger contenido de DLC opcional con `MayRequire`.
+4. Cargar el mod, revisar el log y comprobar el panel de información del peón.
 
-**Advertencia:** que un nombre aparezca en el proyecto no significa automáticamente que esté colocado en el bloque correcto. Por ejemplo, `MechRepairSpeed` es un stat válido pero su aplicación debe ir en `<statFactors>`; `MechBandwidth` y `MechControlGroups` son offsets; y `WorkSpeedGlobalOffsetMech` es un offset, no un factor.
+Fuentes: Defs instalados de Core/Biotech/Ideology 1.6; [RimWorld Wiki — Stats](https://rimworldwiki.com/wiki/Stats), [Shooting Accuracy](https://rimworldwiki.com/wiki/Shooting_Accuracy), [Hediffs](https://rimworldwiki.com/wiki/Hediffs), [RimworldModdingFiles — HediffDef](https://github.com/RimWorldMod/RimworldModdingFiles/blob/master/Defs/HediffDefs/Hediffs.xml) y [RimWorld Modding Wiki — Def Types](https://rimworldmodding.wiki.gg/wiki/Def_Types).
 
-## 6. Fuentes de verificación
-
-- RimWorld Wiki — listado y documentación de Stats.
-- RimWorld Wiki — documentación de Hediffs y estructura de `<stages>`, `<statOffsets>`, `<statFactors>` y `<capMods>`.
-- Defs del Core/Biotech de RimWorld usados como referencia para ejemplos reales.
-- Código/Defs vanilla publicados y ejemplos de mods que utilizan los mismos `StatDef`.
-
-Esta biblioteca debe actualizarse cuando se compruebe un nuevo modificador dentro de los Defs de la versión objetivo del mod.
+La instalación de la versión objetivo es la autoridad para nombres; la wiki y los foros se usan para interpretar comportamiento y balance.
