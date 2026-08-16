@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>Install_Chip_Regulacion_Sueno</defName>
+        <label>instalar chip de regulación del sueño</label>
+        <description>Instala un chip neural que optimiza los ciclos de sueño.</description>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <jobString>Instalando chip de regulación del sueño.</jobString>
+        <workAmount>4000</workAmount>
+        <skillRequirements><Medicine>6</Medicine></skillRequirements>
+        <ingredients>
+            <li><filter><thingDefs><li>ChipRegulacionSueno_Item</li></thingDefs></filter><count>1</count></li>
+            <li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs><li>ChipRegulacionSueno_Item</li></thingDefs>
+            <categories><li>Medicine</li></categories>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts><li>Brain</li></appliedOnFixedBodyParts>
+        <addsHediff>Chip_Regulacion_Sueno</addsHediff>
+    </RecipeDef>
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>Remove_Chip_Regulacion_Sueno</defName>
+        <label>remover chip de regulación del sueño</label>
+        <description>Remueve el chip de regulación del sueño.</description>
+        <workerClass>Recipe_RemoveImplant</workerClass>
+        <jobString>Removiendo chip de regulación del sueño.</jobString>
+        <workAmount>3000</workAmount>
+        <skillRequirements><Medicine>6</Medicine></skillRequirements>
+        <ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li></ingredients>
+        <fixedIngredientFilter><categories><li>Medicine</li></categories></fixedIngredientFilter>
+        <appliedOnFixedBodyParts><li>Brain</li></appliedOnFixedBodyParts>
+        <removesHediff>Chip_Regulacion_Sueno</removesHediff>
+    </RecipeDef>
+</Defs>
