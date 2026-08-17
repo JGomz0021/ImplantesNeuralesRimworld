@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <HediffDef>
+  <HediffDef ParentName="ImplantHediffBase">
     <defName>ChipAsistentePunteria</defName>
     <label>Asistencia Apuntado</label>
     <labelNoun>un implante que mejora la puntería</labelNoun>

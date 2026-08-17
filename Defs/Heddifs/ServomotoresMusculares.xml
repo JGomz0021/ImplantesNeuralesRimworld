@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <HediffDef>
+    <HediffDef ParentName="ImplantHediffBase">
         <defName>Servomotores_Musculares</defName>
         <label>servomotores musculares</label>
         <labelNoun>unos servomotores musculares</labelNoun>

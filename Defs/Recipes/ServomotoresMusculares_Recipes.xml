@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Servomotores_Musculares</defName>
         <label>instalar servomotores musculares</label>
         <description>Instala un sistema de servomotores musculares que refuerza el cuerpo del usuario.</description>

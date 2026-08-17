@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <HediffDef>
+    <HediffDef ParentName="ImplantHediffBase">
         <defName>Exoesqueleto_Ataque</defName>
         <label>exoesqueleto de ataque</label>
         <labelNoun>un exoesqueleto de ataque</labelNoun>

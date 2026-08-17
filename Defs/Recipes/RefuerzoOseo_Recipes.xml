@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Refuerzo_Oseo</defName>
         <label>instalar refuerzo óseo</label>
         <description>Instala un refuerzo óseo que protege el esqueleto del usuario.</description>

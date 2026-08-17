@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
     <defName>Install_ChipAsistentePunteria</defName>
     <label>instalar chip de asistencia de puntería</label>
     <description>Instala un chip de asistencia de puntería que se conecta al nervio óptico y procesa información visual para mejorar la precisión.</description>

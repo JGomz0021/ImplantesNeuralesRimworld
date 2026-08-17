@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <HediffDef>
+  <HediffDef ParentName="ImplantHediffBase">
     <defName>ChipSubprocesamientoNeural</defName>
     <label>Subprocesamiento Neural</label>
     <labelNoun>un implante de subprocesamiento neural</labelNoun>
@@ -15,11 +15,6 @@
     <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
     <priceImpact>true</priceImpact>
-
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.0</partEfficiency>
-    </addedPartProps>
 
     <stages>
       <li>

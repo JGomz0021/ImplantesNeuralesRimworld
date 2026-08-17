@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <HediffDef>
+    <HediffDef ParentName="ImplantHediffBase">
         <defName>Chip_Regulacion_Sueno</defName>
         <label>chip de regulación del sueño</label>
         <labelNoun>un chip de regulación del sueño</labelNoun>

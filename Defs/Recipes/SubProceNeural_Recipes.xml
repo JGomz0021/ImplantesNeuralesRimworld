@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
     <defName>Install_ChipSubNeural</defName>
     <label>instalar chip de subprocesamiento neural</label>
     <description>Instala un chip de subprocesamiento neural en el cerebro del objetivo.</description>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Chip_Regulacion_Sueno</defName>
         <label>instalar chip de regulación del sueño</label>
         <description>Instala un chip neural que optimiza los ciclos de sueño.</description>
