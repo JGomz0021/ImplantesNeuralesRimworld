@@ -3,9 +3,9 @@
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>Exoesqueleto_Ataque</defName>
-        <label>exoesqueleto de ataque</label>
-        <labelNoun>un exoesqueleto de ataque</labelNoun>
-        <description>Un exoesqueleto diseñado para un mejor rendimiento en combate. Mejora significativamente las capacidades físicas y de combate del portador.</description>
+        <label>armazón de asalto</label>
+        <labelNoun>un armazón de asalto</labelNoun>
+        <description>Un armazón interno de servos y refuerzos articulados. Está diseñado para convertir movimientos bruscos en golpes más fuertes y respuestas de combate más rápidas.</description>
 
         <descriptionHyperlinks>
             <ThingDef>ExoesqueletoA_Item</ThingDef>
@@ -18,27 +18,24 @@
 
         <stages>
             <li>
-                <!-- Bonos de estadísticas con statOffsets -->
                 <statOffsets>
-                    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn> <!-- +10 puntos porcentuales de precisión de disparo -->
-                    <MeleeDodgeChance>0.05</MeleeDodgeChance> <!-- +5 puntos porcentuales de probabilidad de esquivar -->
+                    <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>2.5</MeleeDodgeChance>
                 </statOffsets>
 
-                <!-- Bonos multiplicadores con statFactors -->
                 <statFactors>
-                    <MeleeDamageFactor>1.5</MeleeDamageFactor> <!-- 150% de daño (50% más) -->
-                    <MoveSpeed>1.10</MoveSpeed> <!-- +10% velocidad de movimiento -->
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                    <MoveSpeed>1.10</MoveSpeed>
                 </statFactors>
 
-                <!-- Bonos de capacidades -->
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
-                        <postFactor>1.10</postFactor> <!-- +10% movimiento -->
+                        <postFactor>1.10</postFactor>
                     </li>
                     <li>
                         <capacity>Manipulation</capacity>
-                        <postFactor>1.05</postFactor> <!-- +5% manipulación -->
+                        <postFactor>1.05</postFactor>
                     </li>
                 </capMods>
             </li>

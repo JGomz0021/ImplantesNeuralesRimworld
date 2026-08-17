@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>ChipRegulacionSueno_Item</defName>
-        <label>chip de regulación del sueño</label>
-        <description>Un implante neural que optimiza los ciclos de sueño y permite recuperar el descanso con mayor rapidez.</description>
+        <label>regulador circadiano</label>
+        <description>Un regulador neural que sincroniza las fases de sueño y recuperación del portador.</description>
         <descriptionHyperlinks>
             <RecipeDef>Install_Chip_Regulacion_Sueno</RecipeDef>
         </descriptionHyperlinks>
@@ -41,13 +41,6 @@
                 <li>FabricationBench</li>
             </recipeUsers>
         </recipeMaker>
-        <comps>
-            <li Class="CompProperties_UseEffectInstallImplant">
-                <hediffDef>Chip_Regulacion_Sueno</hediffDef>
-                <bodyPart>Brain</bodyPart>
-                <canUpgrade>false</canUpgrade>
-            </li>
-        </comps>
     </ThingDef>
 
 </Defs>

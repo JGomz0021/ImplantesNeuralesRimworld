@@ -3,9 +3,9 @@
 
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ChipAsistentePunteria</defName>
-    <label>Asistencia Apuntado</label>
-    <labelNoun>un implante que mejora la puntería</labelNoun>
-    <description>Implante que se instala en la retina de un ojo que mejora la puntería del individuo.</description>
+    <label>módulo balístico ocular</label>
+    <labelNoun>un módulo balístico ocular</labelNoun>
+    <description>Un implante retiniano que superpone cálculos balísticos sobre el campo de visión del portador. Mejora la precisión de disparo, pero amortigua ligeramente la percepción psíquica.</description>
 
     <descriptionHyperlinks>
       <ThingDef>ChipAsistentePunteria_Item</ThingDef>
@@ -18,12 +18,13 @@
 
     <stages>
       <li>
-
-        <!-- Usar statOffsets, NO statFactors -->
         <statOffsets>
-          <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn> <!-- +5 puntos porcentuales de precisión -->
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
         </statOffsets>
 
+        <statFactors>
+          <PsychicSensitivity>0.90</PsychicSensitivity>
+        </statFactors>
       </li>
     </stages>
 

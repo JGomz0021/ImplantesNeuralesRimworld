@@ -3,8 +3,8 @@
     
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>ExoesqueletoA_Item</defName>
-        <label>exoesqueleto de ataque</label>
-        <description>Un exoesqueleto avanzado de cuerpo completo diseñado para mejorar significativamente el rendimiento en combate. Aumenta la velocidad, precisión, esquiva y daño en combate cuerpo a cuerpo.</description>
+        <label>armazón de asalto</label>
+        <description>Un armazón interno diseñado para combate. Reacciona al movimiento del portador con refuerzos de fuerza y estabilización balística.</description>
 
         <descriptionHyperlinks>
             <RecipeDef>Install_Exoesqueleto_Ataque</RecipeDef>

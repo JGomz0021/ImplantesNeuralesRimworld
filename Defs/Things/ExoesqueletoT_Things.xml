@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>ExoesqueletoT_Item</defName>
-        <label>exoesqueleto de trabajo</label>
-        <description>Un exoesqueleto avanzado de cuerpo completo que mejora las capacidades de un Xenohumano en trabajos diarios.</description>
+        <label>armazón utilitario</label>
+        <description>Un armazón interno que reduce el esfuerzo físico y mejora el control fino durante las tareas diarias.</description>
         
         <descriptionHyperlinks>
             <RecipeDef>Install_Exoesqueleto_Trabajo</RecipeDef>

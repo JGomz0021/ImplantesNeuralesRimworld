@@ -2,9 +2,9 @@
 <Defs>
 
   <ThingDef ParentName="BodyPartBionicBase">
-    <defName>ChipSubprocesamientoNeural_Item</defName>
-    <label>coprocesador neural</label>
-    <description>Un coprocesador neural que acelera la interpretación de señales y mejora la coordinación de los mecanizadores con sus mecas.</description>
+    <defName>MecanitasSanguineas_Item</defName>
+    <label>dosis de mecanitas sanguíneas</label>
+    <description>Una ampolla sellada que contiene mecanitas médicas programadas para operar dentro del sistema circulatorio.</description>
 
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
@@ -14,9 +14,9 @@
     <techLevel>Ultra</techLevel>
 
     <statBases>
-      <MarketValue>8000</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>6000</WorkToMake>
+      <MarketValue>5500</MarketValue>
+      <Mass>0.15</Mass>
+      <WorkToMake>5000</WorkToMake>
     </statBases>
 
     <thingCategories>
@@ -24,16 +24,14 @@
     </thingCategories>
 
     <costList>
-      <SubcoreHigh>1</SubcoreHigh>
-      <ComponentSpacer>8</ComponentSpacer>
-      <Plasteel>100</Plasteel>
-      <Gold>10</Gold>
-      <Silver>10</Silver>
-      <NanostructuringChip>1</NanostructuringChip>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Gold>5</Gold>
+      <Neutroamine>20</Neutroamine>
     </costList>
 
     <recipeMaker>
-      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -46,7 +44,6 @@
         <li>FabricationBench</li>
       </recipeUsers>
     </recipeMaker>
-
   </ThingDef>
 
 </Defs>

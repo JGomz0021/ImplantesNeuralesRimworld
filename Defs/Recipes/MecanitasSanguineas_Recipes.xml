@@ -2,32 +2,20 @@
 <Defs>
 
   <RecipeDef ParentName="SurgeryInstallImplantBase">
-    <defName>Install_ChipAsistentePunteria</defName>
-    <label>instalar módulo balístico ocular</label>
-    <description>Implanta un módulo balístico ocular conectado al nervio óptico.</description>
-
+    <defName>Install_MecanitasSanguineas</defName>
+    <label>inyectar mecanitas sanguíneas</label>
+    <description>Introduce una colonia de mecanitas médicas en el torrente sanguíneo del paciente.</description>
     <workerClass>Recipe_InstallImplant</workerClass>
-    <jobString>Instalando módulo balístico ocular.</jobString>
-    <workAmount>2000</workAmount>
-
-    <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
-    <deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
-
+    <jobString>Inyectando mecanitas sanguíneas.</jobString>
+    <workAmount>4000</workAmount>
     <skillRequirements>
-      <Medicine>6</Medicine>
+      <Medicine>7</Medicine>
     </skillRequirements>
-
-    <appliedOnFixedBodyParts>
-      <li>Eye</li>
-    </appliedOnFixedBodyParts>
-
-    <addsHediff>ChipAsistentePunteria</addsHediff>
-
     <ingredients>
       <li>
         <filter>
           <thingDefs>
-            <li>ChipAsistentePunteria_Item</li>
+            <li>MecanitasSanguineas_Item</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -38,33 +26,32 @@
             <li>Medicine</li>
           </categories>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
-
     <fixedIngredientFilter>
       <thingDefs>
-        <li>ChipAsistentePunteria_Item</li>
+        <li>MecanitasSanguineas_Item</li>
       </thingDefs>
       <categories>
         <li>Medicine</li>
       </categories>
     </fixedIngredientFilter>
-
-    <recipeUsers>
-      <li>Human</li>
-    </recipeUsers>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MecanitasSanguineas</addsHediff>
   </RecipeDef>
 
   <RecipeDef ParentName="SurgeryRemoveImplantBase">
-    <defName>RemoveAsistPunteria</defName>
-    <label>remover módulo balístico ocular</label>
-    <description>Remueve un módulo balístico ocular.</description>
+    <defName>Remove_MecanitasSanguineas</defName>
+    <label>purgar mecanitas sanguíneas</label>
+    <description>Extrae la colonia de mecanitas sanguíneas del sistema circulatorio.</description>
     <workerClass>Recipe_RemoveImplant</workerClass>
-    <jobString>Removiendo módulo balístico ocular.</jobString>
-    <workAmount>3000</workAmount>
+    <jobString>Purgando mecanitas sanguíneas.</jobString>
+    <workAmount>3500</workAmount>
     <skillRequirements>
-      <Medicine>6</Medicine>
+      <Medicine>7</Medicine>
     </skillRequirements>
     <ingredients>
       <li>
@@ -82,9 +69,9 @@
       </categories>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
-      <li>Eye</li>
+      <li>Torso</li>
     </appliedOnFixedBodyParts>
-    <removesHediff>ChipAsistentePunteria</removesHediff>
+    <removesHediff>MecanitasSanguineas</removesHediff>
   </RecipeDef>
 
 </Defs>

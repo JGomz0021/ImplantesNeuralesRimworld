@@ -3,8 +3,8 @@
 
   <ResearchProjectDef>
     <defName>ImplantesAvanzados</defName>
-    <label>implantes avanzados</label>
-    <description>Desarrollo de implantes neurales avanzados para mejorar las capacidades de humanos y mecanizadores.</description>
+    <label>integración cibernética avanzada</label>
+    <description>El estudio de interfaces neurales, materiales implantables y mecanitas médicas permite fabricar mejoras cibernéticas complejas para colonos y mecanizadores.</description>
 
     <baseCost>5000</baseCost>
     <techLevel>Ultra</techLevel>

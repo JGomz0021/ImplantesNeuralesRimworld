@@ -2,10 +2,10 @@
 <Defs>
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Refuerzo_Oseo</defName>
-        <label>instalar refuerzo óseo</label>
-        <description>Instala un refuerzo óseo que protege el esqueleto del usuario.</description>
+        <label>instalar malla osteorreforzada</label>
+        <description>Implanta una malla de filamentos reforzados sobre el esqueleto.</description>
         <workerClass>Recipe_InstallImplant</workerClass>
-        <jobString>Instalando refuerzo óseo.</jobString>
+        <jobString>Instalando malla osteorreforzada.</jobString>
         <workAmount>5000</workAmount>
         <skillRequirements><Medicine>8</Medicine></skillRequirements>
         <ingredients>
@@ -21,10 +21,10 @@
     </RecipeDef>
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Refuerzo_Oseo</defName>
-        <label>remover refuerzo óseo</label>
-        <description>Remueve el refuerzo óseo.</description>
+        <label>remover malla osteorreforzada</label>
+        <description>Remueve una malla osteorreforzada.</description>
         <workerClass>Recipe_RemoveImplant</workerClass>
-        <jobString>Removiendo refuerzo óseo.</jobString>
+        <jobString>Removiendo malla osteorreforzada.</jobString>
         <workAmount>3000</workAmount>
         <skillRequirements><Medicine>6</Medicine></skillRequirements>
         <ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li></ingredients>

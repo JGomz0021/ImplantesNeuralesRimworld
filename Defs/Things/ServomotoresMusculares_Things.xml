@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>ServomotoresMusculares_Item</defName>
-        <label>servomotores musculares</label>
-        <description>Un sistema de actuadores implantados que refuerza la musculatura y mejora la resistencia física del portador.</description>
+        <label>servomotores miomiméticos</label>
+        <description>Actuadores implantados que complementan la musculatura y absorben parte de la fuerza recibida.</description>
         <descriptionHyperlinks>
             <RecipeDef>Install_Servomotores_Musculares</RecipeDef>
         </descriptionHyperlinks>
@@ -38,13 +38,6 @@
                 <li>FabricationBench</li>
             </recipeUsers>
         </recipeMaker>
-        <comps>
-            <li Class="CompProperties_UseEffectInstallImplant">
-                <hediffDef>Servomotores_Musculares</hediffDef>
-                <bodyPart>Torso</bodyPart>
-                <canUpgrade>false</canUpgrade>
-            </li>
-        </comps>
     </ThingDef>
 
 </Defs>

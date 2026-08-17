@@ -3,9 +3,9 @@
 
   <HediffDef ParentName="ImplantHediffBase">
     <defName>ChipSubprocesamientoNeural</defName>
-    <label>Subprocesamiento Neural</label>
-    <labelNoun>un implante de subprocesamiento neural</labelNoun>
-    <description>Implante neural que mejora la capacidad de procesamiento del portador. El aumento de actividad cerebral incrementa el consumo metabólico. En mecanizadores, optimiza la sincronización con mecas.</description>
+    <label>coprocesador neural</label>
+    <labelNoun>un coprocesador neural</labelNoun>
+    <description>Un coprocesador conectado a los centros ejecutivos del cerebro. Acelera el procesamiento sensorial a costa de un mayor consumo metabólico. En mecanizadores, mejora la coordinación con sus mecas.</description>
 
     <descriptionHyperlinks>
       <ThingDef>ChipSubprocesamientoNeural_Item</ThingDef>
@@ -19,31 +19,28 @@
     <stages>
       <li>
 
-        <!-- Capacidades -->
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>0.10</offset> <!-- +10% conciencia -->
+            <offset>0.10</offset>
           </li>
           <li>
             <capacity>Sight</capacity>
-            <offset>0.10</offset> <!-- +10% vista -->
+            <offset>0.10</offset>
           </li>
         </capMods>
 
-        <!-- Modificador de hambre -->
-        <hungerRateFactorOffset>0.15</hungerRateFactorOffset> <!-- +15% tasa de caída de hambre -->
+        <hungerRateFactorOffset>0.15</hungerRateFactorOffset>
 
-        <!-- Stats -->
         <statOffsets>
           <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">12</MechBandwidth>
-          <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups> <!-- +1 grupo de control de mecas -->
-          <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">0.10</WorkSpeedGlobalOffsetMech> <!-- +10% velocidad de trabajo de mecas -->
+          <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups>
+          <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">0.10</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">0.15</MechRepairSpeed>
         </statOffsets>
 
         <statFactors>
-          <RestRateMultiplier>1.05</RestRateMultiplier> <!-- +5% tasa de descanso -->
-          <MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">1.15</MechRepairSpeed> <!-- +15% velocidad de reparación de mecas -->
+          <RestRateMultiplier>1.05</RestRateMultiplier>
         </statFactors>
 
       </li>

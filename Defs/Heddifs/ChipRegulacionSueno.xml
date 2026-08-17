@@ -3,9 +3,9 @@
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>Chip_Regulacion_Sueno</defName>
-        <label>chip de regulación del sueño</label>
-        <labelNoun>un chip de regulación del sueño</labelNoun>
-        <description>Un implante neural que optimiza los ciclos de sueño y permite recuperar el descanso con mayor rapidez.</description>
+        <label>regulador circadiano</label>
+        <labelNoun>un regulador circadiano</labelNoun>
+        <description>Un implante neural que ajusta los ciclos de sueño del portador. Durante el descanso, dirige la actividad cerebral hacia una recuperación más eficiente.</description>
         <descriptionHyperlinks>
             <ThingDef>ChipRegulacionSueno_Item</ThingDef>
         </descriptionHyperlinks>
