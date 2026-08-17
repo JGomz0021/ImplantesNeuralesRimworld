@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Chip_Regulacion_Sueno</defName>
-        <label>instalar chip de regulación del sueño</label>
-        <description>Instala un chip neural que optimiza los ciclos de sueño.</description>
+        <label>instalar regulador circadiano</label>
+        <description>Implanta un regulador neural que optimiza los ciclos de sueño.</description>
         <workerClass>Recipe_InstallImplant</workerClass>
-        <jobString>Instalando chip de regulación del sueño.</jobString>
+        <jobString>Instalando regulador circadiano.</jobString>
         <workAmount>4000</workAmount>
         <skillRequirements><Medicine>6</Medicine></skillRequirements>
         <ingredients>
@@ -21,10 +21,10 @@
     </RecipeDef>
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Chip_Regulacion_Sueno</defName>
-        <label>remover chip de regulación del sueño</label>
-        <description>Remueve el chip de regulación del sueño.</description>
+        <label>remover regulador circadiano</label>
+        <description>Remueve un regulador circadiano.</description>
         <workerClass>Recipe_RemoveImplant</workerClass>
-        <jobString>Removiendo chip de regulación del sueño.</jobString>
+        <jobString>Removiendo regulador circadiano.</jobString>
         <workAmount>3000</workAmount>
         <skillRequirements><Medicine>6</Medicine></skillRequirements>
         <ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li></ingredients>

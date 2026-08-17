@@ -5,11 +5,11 @@
     <!-- Install Recipe -->
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Exoesqueleto_Trabajo</defName>
-        <label>instalar exoesqueleto de trabajo</label>
-        <description>Instala un exoesqueleto de uso diario, el proceso es extremadamente complejo y requiere un profundo conocimiento de anatomía humana.</description>
+        <label>instalar armazón utilitario</label>
+        <description>Implanta un armazón interno para asistencia industrial y trabajo diario.</description>
 
         <workerClass>Recipe_InstallImplant</workerClass>
-        <jobString>Instalando exoesqueleto de trabajo.</jobString>
+        <jobString>Instalando armazón utilitario.</jobString>
         <workAmount>5000</workAmount>
         
         <skillRequirements>
@@ -54,11 +54,11 @@
     <!-- Remove Recipe -->
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Exoesqueleto_Trabajo</defName>  <!-- ✓ Fixed capitalization -->
-        <label>remover exoesqueleto de trabajo</label>
-        <description>Remueve el exoesqueleto de trabajo de cuerpo completo.</description>
+        <label>remover armazón utilitario</label>
+        <description>Remueve un armazón interno de asistencia industrial.</description>
         
         <workerClass>Recipe_RemoveImplant</workerClass>
-        <jobString>Removiendo exoesqueleto de trabajo.</jobString>
+        <jobString>Removiendo armazón utilitario.</jobString>
         <workAmount>3000</workAmount>
         
         <skillRequirements>

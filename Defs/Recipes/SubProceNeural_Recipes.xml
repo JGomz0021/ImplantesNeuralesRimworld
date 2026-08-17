@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
     <defName>Install_ChipSubNeural</defName>
-    <label>instalar chip de subprocesamiento neural</label>
-    <description>Instala un chip de subprocesamiento neural en el cerebro del objetivo.</description>
+    <label>instalar coprocesador neural</label>
+    <description>Implanta un coprocesador neural en el cerebro del paciente.</description>
 
     <workerClass>Recipe_InstallImplant</workerClass>
-    <jobString>Instalando chip de subprocesamiento neural.</jobString>
+    <jobString>Instalando coprocesador neural.</jobString>
     <workAmount>2500</workAmount>
     
     <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
@@ -59,10 +59,10 @@
   <!-- Recipe de remoción del chip de subprocesamiento neural -->
   <RecipeDef ParentName="SurgeryRemoveImplantBase">
     <defName>Remove_ChipSubNeural</defName>
-    <label>remover chip de subprocesamiento neural</label>
-    <description>Remueve el chip de subprocesamiento neural del cerebro.</description>
+    <label>remover coprocesador neural</label>
+    <description>Remueve un coprocesador neural del cerebro.</description>
     <workerClass>Recipe_RemoveImplant</workerClass>
-    <jobString>Removiendo chip de subprocesamiento neural.</jobString>
+    <jobString>Removiendo coprocesador neural.</jobString>
     <workAmount>2000</workAmount>
     <skillRequirements>
       <Medicine>7</Medicine>

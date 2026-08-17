@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <HediffDef>
+    <HediffDef ParentName="ImplantHediffBase">
         <defName>Refuerzo_Oseo</defName>
-        <label>refuerzo óseo</label>
-        <labelNoun>un refuerzo óseo</labelNoun>
-        <description>Una estructura interna de materiales reforzados que fortalece el esqueleto. Reduce el daño contundente, haciendo menos probables las fracturas causadas por impactos.</description>
+        <label>malla osteorreforzada</label>
+        <labelNoun>una malla osteorreforzada</labelNoun>
+        <description>Una red de filamentos de plastiacero que se ancla al esqueleto. Dispersa el impacto de los golpes y ayuda a proteger el cuerpo de daños graves.</description>
         <descriptionHyperlinks>
             <ThingDef>RefuerzoOseo_Item</ThingDef>
         </descriptionHyperlinks>
@@ -16,7 +16,6 @@
         <stages>
             <li>
                 <statFactors>
-                    <!-- HediffDef no admite damageFactors; esta resistencia reduce el daño recibido de forma válida. -->
                     <IncomingDamageFactor>0.85</IncomingDamageFactor>
                 </statFactors>
             </li>

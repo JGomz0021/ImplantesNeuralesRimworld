@@ -2,12 +2,12 @@
 <Defs>
 
     <!-- Recipe para instalar el Exoesqueleto de Ataque -->
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Exoesqueleto_Ataque</defName>
-        <label>instalar exoesqueleto de ataque</label>
-        <description>Instala un exoesqueleto de ataque de cuerpo completo. Este procedimiento es extremadamente complejo y requiere habilidades quirúrgicas avanzadas.</description>
+        <label>instalar armazón de asalto</label>
+        <description>Implanta un armazón interno de combate en el torso del paciente.</description>
         <workerClass>Recipe_InstallImplant</workerClass>
-        <jobString>Instalando exoesqueleto de ataque.</jobString>
+        <jobString>Instalando armazón de asalto.</jobString>
         <workAmount>5000</workAmount>
         <skillRequirements>
             <Medicine>8</Medicine>
@@ -47,10 +47,10 @@
     <!-- Recipe para remover el Exoesqueleto de Ataque -->
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Exoesqueleto_Ataque</defName>
-        <label>remover exoesqueleto de ataque</label>
-        <description>Remueve el exoesqueleto de ataque de cuerpo completo.</description>
+        <label>remover armazón de asalto</label>
+        <description>Remueve un armazón interno de combate.</description>
         <workerClass>Recipe_RemoveImplant</workerClass>
-        <jobString>Removiendo exoesqueleto de ataque.</jobString>
+        <jobString>Removiendo armazón de asalto.</jobString>
         <workAmount>3000</workAmount>
         <skillRequirements>
             <Medicine>6</Medicine>

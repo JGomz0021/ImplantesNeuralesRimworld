@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>Install_Servomotores_Musculares</defName>
-        <label>instalar servomotores musculares</label>
-        <description>Instala un sistema de servomotores musculares que refuerza el cuerpo del usuario.</description>
+        <label>instalar servomotores miomiméticos</label>
+        <description>Implanta actuadores que complementan la respuesta muscular del paciente.</description>
         <workerClass>Recipe_InstallImplant</workerClass>
-        <jobString>Instalando servomotores musculares.</jobString>
+        <jobString>Instalando servomotores miomiméticos.</jobString>
         <workAmount>5000</workAmount>
         <skillRequirements><Medicine>8</Medicine></skillRequirements>
         <ingredients>
@@ -21,10 +21,10 @@
     </RecipeDef>
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <defName>Remove_Servomotores_Musculares</defName>
-        <label>remover servomotores musculares</label>
-        <description>Remueve los servomotores musculares.</description>
+        <label>remover servomotores miomiméticos</label>
+        <description>Remueve los actuadores musculares implantados.</description>
         <workerClass>Recipe_RemoveImplant</workerClass>
-        <jobString>Removiendo servomotores musculares.</jobString>
+        <jobString>Removiendo servomotores miomiméticos.</jobString>
         <workAmount>3000</workAmount>
         <skillRequirements><Medicine>6</Medicine></skillRequirements>
         <ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>2</count></li></ingredients>

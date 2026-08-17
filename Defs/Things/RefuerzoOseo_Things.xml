@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>RefuerzoOseo_Item</defName>
-        <label>refuerzo óseo</label>
-        <description>Una estructura interna de materiales reforzados que fortalece el esqueleto y protege las partes óseas.</description>
+        <label>malla osteorreforzada</label>
+        <description>Una red de filamentos de plastiacero que refuerza el esqueleto y disipa los impactos.</description>
         <descriptionHyperlinks>
             <RecipeDef>Install_Refuerzo_Oseo</RecipeDef>
         </descriptionHyperlinks>
@@ -38,13 +38,6 @@
                 <li>FabricationBench</li>
             </recipeUsers>
         </recipeMaker>
-        <comps>
-            <li Class="CompProperties_UseEffectInstallImplant">
-                <hediffDef>Refuerzo_Oseo</hediffDef>
-                <bodyPart>Torso</bodyPart>
-                <canUpgrade>false</canUpgrade>
-            </li>
-        </comps>
     </ThingDef>
 
 </Defs>

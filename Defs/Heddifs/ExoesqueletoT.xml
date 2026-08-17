@@ -4,9 +4,9 @@
 
     <HediffDef ParentName="ImplantHediffBase">
         <defName>Exoesqueleto_Trabajo</defName>
-        <label>exoesqueleto de trabajo</label>
-        <labelNoun>un exoesqueleto de trabajo</labelNoun>
-        <description>Un exoesqueleto diseñado para el uso diario.</description>
+        <label>armazón utilitario</label>
+        <labelNoun>un armazón utilitario</labelNoun>
+        <description>Un armazón interno de asistencia industrial. Sus servos distribuyen el esfuerzo y estabilizan los movimientos para el trabajo diario.</description>
 
         <descriptionHyperlinks>
             <ThingDef>ExoesqueletoT_Item</ThingDef>
@@ -22,19 +22,17 @@
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
-                        <postFactor>1.05</postFactor> <!-- +5% movimiento -->
+                        <postFactor>1.05</postFactor>
                     </li>
                     <li>
                         <capacity>Manipulation</capacity>
-                        <postFactor>1.15</postFactor> <!-- +15% manipulación -->
+                        <postFactor>1.15</postFactor>
                     </li>
                 </capMods>
             </li>
         </stages>
         
         <spawnThingOnRemoved>ExoesqueletoT_Item</spawnThingOnRemoved>
-        
-        <!-- ✓ ELIMINADO addedPartProps - no es necesario para implantes -->
         
     </HediffDef>
 

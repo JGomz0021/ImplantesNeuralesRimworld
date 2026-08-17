@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="BodyPartBionicBase">
     <defName>ChipAsistentePunteria_Item</defName>
-    <label>chip asistente de puntería</label>
-    <description>Chip que se implanta en un ojo, realiza cálculos de balística y se los proporciona al usuario para una mejor precisión.</description>
+    <label>módulo balístico ocular</label>
+    <description>Un módulo ocular que calcula trayectorias, correcciones de deriva y oportunidades de disparo.</description>
 
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
@@ -45,13 +45,6 @@
       </recipeUsers>
     </recipeMaker>
 
-    <comps>
-      <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>ChipAsistentePunteria</hediffDef>
-        <bodyPart>Eye</bodyPart>
-        <canUpgrade>false</canUpgrade>
-      </li>
-    </comps>
   </ThingDef>
 
 </Defs>
