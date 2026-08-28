@@ -20,7 +20,7 @@
             <li>
                 <statOffsets>
                     <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>2.5</MeleeDodgeChance>
+                    <MeleeDodgeChance>5</MeleeDodgeChance>
                 </statOffsets>
 
                 <statFactors>
