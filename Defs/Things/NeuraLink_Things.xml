@@ -4,7 +4,7 @@
   <ThingDef ParentName="BodyPartBionicBase">
     <defName>NeuraLink_Item</defName>
     <label>NeuraLink</label>
-    <description>Un implante neural con un transceptor de alta ganancia. Conectado a un centro de cómputo, permite recibir asistencia táctica y motora a distancia.</description>
+    <description>Un implante neural con un transceptor de alta ganancia. Conectado a un centro de cómputo (máx. 300 casillas, 5 conexiones por centro), permite recibir asistencia táctica y motora a distancia.</description>
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>

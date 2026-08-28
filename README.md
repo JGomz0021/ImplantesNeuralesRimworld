@@ -18,13 +18,13 @@ Mod para **RimWorld 1.6** que incorpora implantes neurales y corporales para col
 - **Refuerzo óseo:** reduce un 15% todo el daño recibido. Esto mejora la resistencia a impactos y disminuye indirectamente el riesgo de fracturas; RimWorld no ofrece un modificador XML genérico de probabilidad de fractura ni de daño por tipo para Hediffs.
 - **Servomotores musculares:** mejoran movilidad y manipulación en un 10%, velocidad de movimiento en un 5% y reducen un 10% todo el daño recibido, aumentando la supervivencia frente a golpes, cortes y otras heridas.
 - **Mecanitas sanguíneas:** una colonia de nanobots médicos que circula por la sangre. Reducen un 20% el sangrado, aceleran un 25% la curación de heridas y aumentan un 10% el bombeo de sangre.
-- **NeuraLink:** un implante cerebral con transceptor. Al conectarse a un centro de cómputo activo, mejora un 10% la manipulación y aporta asistencia de puntería.
+- **NeuraLink:** un implante cerebral con transceptor. Al conectarse a un centro de cómputo activo (máx. 300 casillas, 5 conexiones por centro), mejora un 10% la manipulación y aporta asistencia de puntería.
 
 Los implantes se fabrican en el banco de fabricación y la mayor parte se desbloquea con la investigación **Implantes avanzados**. Esta requiere Biónica y UltraMechtech.
 
 ## Centro de cómputo
 
-El **Centro de cómputo** es una construcción eléctrica de 3×2 que se desbloquea con Implantes avanzados. Consume 600 W y da cobertura a los NeuraLink de los colonos en un radio de 200 casillas. Si el centro se apaga, se avería o el colono abandona el radio, el enlace y sus bonificaciones se retiran automáticamente.
+El **Centro de cómputo** es una construcción eléctrica de 3×2 que se desbloquea con Implantes avanzados. Consume 600 W y da cobertura a los NeuraLink de los colonos en un radio de 300 casillas. Cada centro soporta hasta 5 conexiones simultáneas. Si el centro se apaga, se avería, se supera el límite de conexiones o el colono abandona el radio, el enlace y sus bonificaciones se retiran automáticamente.
 
 ## Estado de pruebas
 

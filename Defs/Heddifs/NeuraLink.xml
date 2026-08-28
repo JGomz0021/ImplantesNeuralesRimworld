@@ -5,7 +5,7 @@
     <defName>NeuraLink</defName>
     <label>NeuraLink</label>
     <labelNoun>un NeuraLink</labelNoun>
-    <description>Un implante neural con un transceptor de largo alcance. Cuando está conectado a un centro de cómputo activo, recibe asistencia de cálculo en tiempo real.</description>
+    <description>Un implante neural con un transceptor de largo alcance. Cuando está conectado a un centro de cómputo activo (máx. 300 casillas, 5 conexiones por centro), recibe asistencia de cálculo en tiempo real.</description>
     <descriptionHyperlinks>
       <ThingDef>NeuraLink_Item</ThingDef>
     </descriptionHyperlinks>

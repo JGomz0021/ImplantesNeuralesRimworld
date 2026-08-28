@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CentroComputo</defName>
     <label>centro de cómputo</label>
-    <description>Un clúster de servidores, relés y procesadores especializados. Los colonos con un NeuraLink instalado reciben asistencia de cálculo mientras estén a menos de 200 casillas de un centro alimentado.</description>
+    <description>Un clúster de servidores, relés y procesadores especializados. Los colonos con un NeuraLink instalado reciben asistencia de cálculo mientras estén a menos de 300 casillas de un centro alimentado. Cada centro soporta hasta 5 conexiones simultáneas.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/Misc/CommsConsole</texPath>
@@ -42,6 +42,10 @@
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_RadiusRing">
+        <radius>300</radius>
+        <color>(0.2, 0.6, 1.0, 0.3)</color>
+      </li>
     </comps>
     <designationCategory>Misc</designationCategory>
     <uiOrder>2110</uiOrder>
