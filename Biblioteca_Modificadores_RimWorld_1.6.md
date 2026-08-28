@@ -11,7 +11,7 @@ Los stats se sitúan dentro de una etapa. `statOffsets` suma una cantidad; `stat
 ```xml
 <stages>
   <li>
-    <statOffsets><ShootingAccuracyPawn>0.05</ShootingAccuracyPawn></statOffsets>
+    <statOffsets><ShootingAccuracyPawn>5</ShootingAccuracyPawn></statOffsets>
     <statFactors><MoveSpeed>1.10</MoveSpeed></statFactors>
   </li>
 </stages>
@@ -21,14 +21,14 @@ Los stats se sitúan dentro de una etapa. `statOffsets` suma una cantidad; `stat
 
 | DefName | Tipo habitual | Efecto / nota |
 |---|---|---|
-| `ShootingAccuracyPawn` | offset | Precisión base. `0.05` = +5 puntos porcentuales; no usar enteros como `1` o `3`. |
+| `ShootingAccuracyPawn` | offset | Precisión base en puntos porcentuales. `5` = +5 puntos; escala vanilla (rasgo *Careful shooter* usa `5`, *Trigger-happy* usa `-5`). |
 | `ShootingAccuracyFactor_Touch`, `ShootingAccuracyFactor_Short`, `ShootingAccuracyFactor_Medium`, `ShootingAccuracyFactor_Long` | factor | Precisión por tramo de distancia. |
 | `AimingDelayFactor` | factor | Tiempo de apuntado; menor que `1` es más rápido. |
 | `RangedCooldownFactor` | factor | Recuperación tras disparar; menor es más rápido. |
 | `MeleeDamageFactor` | factor | Daño melee infligido. |
 | `MeleeCooldownFactor` | factor | Recuperación entre ataques melee; menor aumenta DPS. |
 | `MeleeHitChance` | offset | Probabilidad de impactar en melee. |
-| `MeleeDodgeChance` | offset | Probabilidad de esquivar melee; usar valores pequeños (`0.03`–`0.05`). |
+| `MeleeDodgeChance` | offset | Probabilidad de esquivar melee en puntos porcentuales; escala vanilla (rasgo *Nimble* usa `15`). Para un implante, valores modestos como `2.5`–`5`. |
 | `MeleeArmorPenetration` | offset | Penetración de ataques melee; depende también del arma. |
 | `MeleeDoorDamageFactor` | factor | Daño melee contra puertas; Biotech. |
 | `PawnTrapSpringChance` | factor | Activar trampas; menor es mejor. |

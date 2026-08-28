@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>NeuraLink</defName>
+    <label>NeuraLink</label>
+    <labelNoun>un NeuraLink</labelNoun>
+    <description>Un implante neural con un transceptor de largo alcance. Cuando está conectado a un centro de cómputo activo, recibe asistencia de cálculo en tiempo real.</description>
+    <descriptionHyperlinks>
+      <ThingDef>NeuraLink_Item</ThingDef>
+    </descriptionHyperlinks>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <comps>
+      <li Class="ImplantesNeurales.HediffCompProperties_NeuraLink" />
+    </comps>
+    <spawnThingOnRemoved>NeuraLink_Item</spawnThingOnRemoved>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>NeuraLinkSignal</defName>
+    <label>enlace NeuraLink</label>
+    <labelNoun>un enlace NeuraLink</labelNoun>
+    <description>El NeuraLink está conectado a un centro de cómputo activo y recibe asistencia de cálculo en tiempo real.</description>
+    <defaultLabelColor>(0.3, 0.8, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>1.10</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>NeuraLink_Item</defName>
+    <label>NeuraLink</label>
+    <description>Un implante neural con un transceptor de alta ganancia. Conectado a un centro de cómputo, permite recibir asistencia táctica y motora a distancia.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>7000</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyParts</li>
+    </thingCategories>
+    <costList>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Gold>8</Gold>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>ImplantesAvanzados</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

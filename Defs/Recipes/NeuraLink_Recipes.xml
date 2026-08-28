@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>Install_NeuraLink</defName>
+    <label>instalar NeuraLink</label>
+    <description>Implanta un NeuraLink en el cerebro del paciente.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Instalando NeuraLink.</jobString>
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>NeuraLink_Item</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>NeuraLink_Item</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>NeuraLink</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Remove_NeuraLink</defName>
+    <label>remover NeuraLink</label>
+    <description>Remueve un NeuraLink del cerebro del paciente.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <jobString>Removiendo NeuraLink.</jobString>
+    <workAmount>3500</workAmount>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <removesHediff>NeuraLink</removesHediff>
+  </RecipeDef>
+
+</Defs>

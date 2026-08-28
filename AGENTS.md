@@ -19,7 +19,6 @@
 
 - Tengo un nivel **principiante en modding de RimWorld**.
 - No tengo conocimientos de **C#**.
-- Cuando introduzcas conceptos de C# o Harmony, explica lo necesario para que pueda entender qué se está haciendo y por qué.
 
 ---
 
@@ -32,13 +31,8 @@
 
 - Flujo de trabajo:
 
-  `Proyecto local → push a rama Cambios_de_IA → pull request → merge con main`
-
 - Si sugieres cambios que puedan afectar:
   - La estructura de carpetas.
-  - El flujo de trabajo de Git.
-  - Las ramas.
-  - El proceso de commits o pull requests.
 
   Indícalo explícitamente antes de realizar o recomendar dichos cambios.
 
@@ -77,16 +71,6 @@ No cambies innecesariamente la estructura existente del proyecto.
 # CUANDO SE NECESITE C#
 
 - Si consideras que una funcionalidad **no puede realizarse completamente mediante XML**, avisa antes de implementar una solución en C#.
-- Explica brevemente:
-  - Por qué XML no es suficiente.
-  - Qué parte tendría que hacerse mediante C#.
-  - Qué comportamiento se implementaría mediante código.
-- Si se utiliza **Harmony**, explica cómo se integraría el código con Harmony.
-- Sé explícito sobre:
-  - La clase donde debería ir el código.
-  - El método que se modificaría.
-  - El tipo de patch de Harmony que se utilizaría (`Prefix`, `Postfix`, `Transpiler`, etc.), cuando corresponda.
-- Como no tengo conocimientos de C#, explica los conceptos nuevos de forma sencilla.
 
 ---
 
@@ -139,26 +123,8 @@ No asumas automáticamente que la solución es correcta si el log no proporciona
 
 ---
 
-# COMMITS
-
-Cuando termines una tarea:
-
-- Sugiere un mensaje de commit corto y descriptivo.
-- El mensaje debe estar en **español**.
-- Debe resumir claramente el cambio realizado.
-
-Ejemplo:
-
-`Añadir efecto de velocidad al Hediff X`
-
----
-
 # RITMO DE TRABAJO
 
-- Prefiero realizar **cambios pequeños y comprobables de uno en uno**.
-- Evita implementar múltiples funcionalidades en la misma respuesta.
-- Primero realiza o propone un cambio concreto.
-- Permite que pueda probarlo antes de continuar con el siguiente cambio.
 - Solo implementa múltiples funcionalidades en una misma respuesta si yo lo solicito explícitamente.
 - Prioriza soluciones simples, fáciles de probar y fáciles de revertir.
 - No realices refactorizaciones grandes si no son necesarias para la tarea actual.
