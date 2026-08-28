@@ -110,7 +110,8 @@ namespace ImplantesNeurales
     public class HediffComp_NeuraLink : HediffComp
     {
         private const int UpdateIntervalTicks = 60;
-        private const int NetworkRadiusSquared = 40000;
+        private const int NetworkRadiusSquared = 90000;
+        private const int MaxConnectionsPerCenter = 5;
 
         public override void CompPostTick(ref float severityAdjustment)
         {
@@ -128,7 +129,8 @@ namespace ImplantesNeurales
         private void UpdateSignal()
         {
             Pawn pawn = parent.pawn;
-            bool shouldReceiveSignal = pawn.IsColonist && pawn.Spawned && IsInActiveNetwork(pawn);
+            Building assignedCenter = FindAssignedCenter(pawn);
+            bool shouldReceiveSignal = pawn.IsColonist && pawn.Spawned && assignedCenter != null;
             Hediff signal = pawn.health.hediffSet.hediffs.FirstOrDefault(hediff => hediff.def == ImplantesNeuralesDefOf.NeuraLinkSignal);
 
             if (shouldReceiveSignal && signal == null)
@@ -151,18 +153,52 @@ namespace ImplantesNeurales
             }
         }
 
-        private static bool IsInActiveNetwork(Pawn pawn)
+        private Building FindAssignedCenter(Pawn pawn)
         {
-            foreach (Building center in pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ImplantesNeuralesDefOf.CentroComputo))
+            if (pawn.Map == null) return null;
+
+            var centers = pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ImplantesNeuralesDefOf.CentroComputo);
+            Building bestCenter = null;
+            int minConnections = int.MaxValue;
+
+            foreach (Building center in centers)
             {
                 CompPowerTrader power = center.GetComp<CompPowerTrader>();
-                if (power != null && power.PowerOn && center.Position.DistanceToSquared(pawn.Position) <= NetworkRadiusSquared)
+                if (power == null || !power.PowerOn) continue;
+
+                if (center.Position.DistanceToSquared(pawn.Position) > NetworkRadiusSquared) continue;
+
+                int currentConnections = CountConnectedPawns(center);
+                if (currentConnections < MaxConnectionsPerCenter && currentConnections < minConnections)
                 {
-                    return true;
+                    minConnections = currentConnections;
+                    bestCenter = center;
                 }
             }
 
-            return false;
+            return bestCenter;
+        }
+
+        private int CountConnectedPawns(Building center)
+        {
+            if (center.Map == null) return 0;
+
+            int count = 0;
+            var allPawns = center.Map.mapPawns.AllPawnsSpawned;
+            foreach (Pawn pawn in allPawns)
+            {
+                if (!pawn.IsColonist || !pawn.Spawned) continue;
+
+                var neuraLinkHediff = pawn.health.hediffSet.hediffs.FirstOrDefault(h => h.def == ImplantesNeuralesDefOf.NeuraLink);
+                if (neuraLinkHediff == null) continue;
+
+                var comp = neuraLinkHediff.TryGetComp<HediffComp_NeuraLink>();
+                if (comp != null && comp.FindAssignedCenter(pawn) == center)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }
