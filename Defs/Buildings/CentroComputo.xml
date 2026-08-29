@@ -42,10 +42,6 @@
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Breakdownable" />
-      <li Class="CompProperties_RadiusRing">
-        <radius>300</radius>
-        <color>(0.2, 0.6, 1.0, 0.3)</color>
-      </li>
     </comps>
     <designationCategory>Misc</designationCategory>
     <uiOrder>2110</uiOrder>
